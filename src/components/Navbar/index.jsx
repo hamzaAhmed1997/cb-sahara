@@ -7,10 +7,10 @@ import Hamburger from "./Hamburger";
 
 const data = [
   { title: "Home", link: "/" },
-  { title: "about", link: "/" },
-  { title: "Gallery", link: "/" },
-  { title: "Contact", link: "/" },
-  { title: "Order Online", link: "/" },
+  { title: "About", link: "#" },
+  { title: "Gallery", link: "#" },
+  { title: "Contact", link: "#" },
+  { title: "Order Online", link: "#" },
 ];
 const Navbar = () => {
   const about = [{ title: "Meat", link: "#" }];
@@ -22,7 +22,6 @@ const Navbar = () => {
 
   const router = useRouter();
   const currentRoute = router.pathname.slice(0);
-  const [nav, setNav] = useState(false);
   const [isSubMenu, setIsSubmenu] = useState(false);
   const [isSubMenu1, setIsSubmenu1] = useState(false);
   return (
@@ -62,8 +61,8 @@ const Navbar = () => {
                         href={"/"}
                         className={`hover:text-[#ffffff] hover:bg-[#FFC648] transition px-[20px] py-[12px] hover:cursor-pointer ${
                           currentRoute === item.link
-                            ? "text-[#6A0000]"
-                            : "text-[#ffffff]"
+                            ? "text-[#ffffff] bg-[#FFC648]"
+                            : "text-[#6A0000]"
                         }`}
                       >
                         {item.title}
