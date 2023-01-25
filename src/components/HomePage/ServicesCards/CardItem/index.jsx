@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const CardItem = ({ title, image }) => {
   return (
-    <div className="p-[10px] w-[300px] h-[300px]  container relative  mx-auto">
+    <div className=" container relative p-[10px] w-[300px] h-[300px] mx-auto">
       <div className=" text-center">
         <img
           src={image}
