@@ -3,6 +3,7 @@ import SaharaMarket from './SaharaMarket'
 import ImageSlider from './ImageSlider'
 import HomeFoodSection from '../Common/HomeFoodSection'
 import HomeSingleSlider from '../Common/HomeSingleSlider'
+import Testimonial from './Testominial'
 
 const HomePage = () => {
     const order=1
@@ -12,12 +13,13 @@ const HomePage = () => {
         <ImageSlider/>        
         <HomeFoodSection order={order}/>
         <HomeSingleSlider/>
-        <SaharaMarket/>
+        <SaharaMarket order={order}/>
         <HomeFoodSection order={order}/>
         <HomeSingleSlider/>
         <HomeFoodSection />
         <HomeFoodSection order={order}/>
         <HomeSingleSlider/>
+        <Testimonial/>
     </div>
 
   )
