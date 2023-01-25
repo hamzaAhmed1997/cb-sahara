@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 .transition {
-    transition-delay: 1s;
-    transition-duration: 0.3s;
+    transition-delay: 0.1s;
+    transition-duration: 0.4s;
     transition-timing-function: ease;
   }
 
