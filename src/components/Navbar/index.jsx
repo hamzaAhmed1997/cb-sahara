@@ -7,10 +7,10 @@ import Hamburger from "./Hamburger";
 
 const data = [
   { title: "Home", link: "/" },
-  { title: "About", link: "#" },
-  { title: "Gallery", link: "#" },
-  { title: "Contact", link: "#" },
-  { title: "Order Online", link: "#" },
+  { title: "About", link: "" },
+  { title: "Gallery", link: "" },
+  { title: "Contact", link: "/contact" },
+  { title: "Order Online", link: "" },
 ];
 const Navbar = () => {
   const about = [{ title: "Meat", link: "#" }];
@@ -25,8 +25,8 @@ const Navbar = () => {
   const [isSubMenu, setIsSubmenu] = useState(false);
   const [isSubMenu1, setIsSubmenu1] = useState(false);
   return (
-    <div className="z-50 w-full mx-auto fixed top-0">
-      <div className=" transition">
+    <div className="fixed top-0 z-50 w-full mx-auto">
+      <div className="transition ">
         <TopCard />
       </div>
       <div className=" shadow-lg bg-[#ffffff]">
@@ -58,7 +58,7 @@ const Navbar = () => {
                       className={`flex cursor-pointer items-center relative `}
                     >
                       <a
-                        href={"/"}
+                        href={item.link}
                         className={`hover:text-[#ffffff] hover:bg-[#FFC648] transition px-[20px] py-[12px] hover:cursor-pointer ${
                           currentRoute === item.link
                             ? "text-[#ffffff] bg-[#FFC648]"
@@ -72,7 +72,7 @@ const Navbar = () => {
                           <span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              className="h-5 w-5"
+                              className="w-5 h-5"
                               viewBox="0 0 20 20"
                               fill="currentColor"
                             >
@@ -96,7 +96,7 @@ const Navbar = () => {
                           <span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              className="h-5 w-5"
+                              className="w-5 h-5"
                               viewBox="0 0 20 20"
                               fill="currentColor"
                             >
