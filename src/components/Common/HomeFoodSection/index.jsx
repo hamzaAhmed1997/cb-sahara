@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const HomeFoodSection = ({ order }) => {
+const HomeFoodSection = ({ order,position }) => {
+ 
   useEffect(() => {
     AOS.init();
   }, []);
@@ -14,6 +15,7 @@ const HomeFoodSection = ({ order }) => {
             className={` sm:p-[15px] md:col-span-2 ${
               order == 1 ? "order-2": "order-1"
             }`}
+
           >
             <h2 className="text-center border-b-[3px] text-[#6A0000] pb-2 border-[#FFB400] text-[36px] font-bold leading-[1.2] mb-[16px] ">
               SAHARA MARKET
@@ -35,10 +37,10 @@ const HomeFoodSection = ({ order }) => {
           </div>
           <div
             className={`py-[30px] px-[10px] w-full flex justify-center  ${
-              order == 1 ? "order-1" : "order-2"
+              order == 1 ? "order-1": "order-2" 
             }`}
             data-aos="fade-right"
-            data-aos-duration="2000"
+            data-aos-duration="3000"
           >
             <img
               src="https://saharamkt.com/wp-content/uploads/2020/01/Restaurant_ed3850622aa2ae55b80492a7fa935d02.jpg"

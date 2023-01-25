@@ -13,6 +13,7 @@ import ContactMap from "./ContactMap";
 
 const HomePage = () => {
   const order = 1;
+  const position="1"
   return (
     <div>
       <HomeHero />
@@ -21,10 +22,10 @@ const HomePage = () => {
       <SaharaMarket />
       <FlipCards/>
       <ImageSlider />
-      <HomeFoodSection order={order} />
+      <HomeFoodSection order={order} position={position} />
       <HomeSingleSlider />
-      <SaharaMarket order={order} />
-      <HomeFoodSection order={order} />
+      <SaharaMarket/>
+      <HomeFoodSection />
       <HomeSingleSlider />
       <HomeFoodSection />
       <HomeFoodSection order={order} />

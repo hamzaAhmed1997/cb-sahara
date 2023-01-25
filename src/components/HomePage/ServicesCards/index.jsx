@@ -28,7 +28,9 @@ const ServicesCards = () => {
           Convenient Pickup and Delivery Services
         </h2>
       </div>
-      <div className="max-w-[1300px] mx-auto px-4 grid lg:grid-cols-3 md:grid-cols-2">
+      <div className="max-w-[1300px] mx-auto px-4 grid lg:grid-cols-3 md:grid-cols-2"
+      data-aos="fade-left"
+      data-aos-duration="3000">
         {data.map((data, index) => {
           return (
             <div key={index}>
