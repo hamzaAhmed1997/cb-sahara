@@ -244,7 +244,7 @@ const ContactForm = ({ data }) => {
                 <button
                   id="mySubmit"
                   type="submit"
-                  className={`w-full py-3 text-base text-[17px] md:text-[19px] lg:text-[21px] leading-[20px] font-[500] text-white bg-[#6a0000] rounded btn mt-9 hover:bg-[#FFB400] focus:ring-2 focus:ring-offset-2  duration-300 focus:outline-none ${
+                  className={`w-full py-3 text-base text-[17px] md:text-[19px] lg:text-[21px] leading-[20px] font-[500] text-white bg-[#6a0000] rounded transition mt-9 hover:bg-[#FFB400]  duration-300 focus:outline-none ${
                     !btnDis && "cursor-not-allowed"
                   }`}
                 >
