@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 .transition {
-    transition-delay: 0s;
-    transition-duration: 0.4s;
+    transition-delay: 1s;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
   }
 
 .shadow{
