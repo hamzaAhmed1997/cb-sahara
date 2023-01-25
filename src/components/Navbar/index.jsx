@@ -7,10 +7,10 @@ import Hamburger from "./Hamburger";
 
 const data = [
   { title: "Home", link: "/" },
-  { title: "About", link: "" },
-  { title: "Gallery", link: "" },
+  { title: "About", link: "/about" },
+  { title: "Gallery", link: "/gallery" },
   { title: "Contact", link: "/contact" },
-  { title: "Order Online", link: "" },
+  { title: "Order Online", link: "#" },
 ];
 const Navbar = () => {
   const about = [{ title: "Meat", link: "#" }];
@@ -48,7 +48,7 @@ const Navbar = () => {
               <div className="mx-[5px] hidden lg:flex items-center text-[#6A0000] leading-[1em] text-[16px] font-[600] gap-x-[20px] ">
                 {data.map((item, index) => (
                   // ${item.link}
-                  <Link href={"/"} legacyBehavior key={index}>
+                  <Link href={item.link} legacyBehavior key={index}>
                     <div
                       onMouseEnter={() => {
                         index === 1 && setIsSubmenu(true),
