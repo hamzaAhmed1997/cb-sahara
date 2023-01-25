@@ -13,7 +13,7 @@ const HomePage = () => {
         <ImageSlider/>        
         <HomeFoodSection order={order}/>
         <HomeSingleSlider/>
-        <SaharaMarket/>
+        <SaharaMarket order={order}/>
         <HomeFoodSection order={order}/>
         <HomeSingleSlider/>
         <HomeFoodSection />
