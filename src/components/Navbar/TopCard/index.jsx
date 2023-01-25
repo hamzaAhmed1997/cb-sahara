@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Facebook from '../../Common/Icon/Facebook';
 import Twitter from '../../Common/Icon/Twitter';
 import Google from '../../Common/Icon/Google';
+import { Instagram } from '../../Common/Icon/Instagram';
 // import Instagram from '../../Common/Icon/Instagram'
 // import Youtube  from '../../Common/Icon/Youtube';
 
@@ -29,7 +30,7 @@ const TopCard = () => {
             </Link>
         <Link href={"/"} legacyBehavior>
               <a className="">
-                {/* <Instagram/> */}
+                <Instagram/>
               </a>
             </Link>
         <Link href={"/"} legacyBehavior>
