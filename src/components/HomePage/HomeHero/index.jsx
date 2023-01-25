@@ -46,7 +46,7 @@ export default function HomeHero() {
     prevArrow: <SampleNextArrow />,
   };
   return (
-    <div>
+    <div className="">
       <Slider {...settings}>
         {myData.map((item, index) => {
           return (
@@ -57,7 +57,7 @@ export default function HomeHero() {
                   background: `url(${item.img}) no-repeat center center/cover`,
                 }}
               >
-                <div className="bg-gradient-to-r from-[#353232b0] py-[180px]">
+                <div className="bg-gradient-to-r from-[#353232b0] py-[300px]">
                   <div
                     data-aos="fade-up"
                     data-aos-duration="3000"

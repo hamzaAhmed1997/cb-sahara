@@ -18,7 +18,7 @@ const data = [
 
 const ServicesCards = () => {
   return (
-    <div className=" pt-[30px] pb-[20px] ">
+    <div className=" pb-[20px] ">
      <div className="py-[60px]">
      <div className="mb-[50px]">
         <p className="text-center text-[#FFB400] text-[40px] font-bold leading-[1]  ">
