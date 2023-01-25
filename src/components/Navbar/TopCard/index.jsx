@@ -8,7 +8,7 @@ import Google from '../../Common/Icon/Google';
 
 const TopCard = () => {
   return (
-    <div className="w-full  px-4 py-1 bg-[#FFC648]  ">
+    <div className="w-full  px-4  bg-[#FFC648]  ">
      <div className='flex items-center justify-between max-w-[1140px] mx-auto px-4  '>
      <div className="w-[21%]">
         <div className="flex gap-x-[2px] space-x-2  py-3 items-start  w-full md:w-auto md:items-center">
