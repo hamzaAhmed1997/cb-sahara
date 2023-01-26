@@ -18,8 +18,8 @@ const data = [
 
 const ServicesCards = () => {
   return (
-    <div className=" pb-[20px] ">
-     <div className="py-[60px]">
+    <div className=" w-full ">
+     <div className="py-[80px] max-w-[1300px] mx-auto px-4">
      <div className="mb-[50px]">
         <p className="text-center text-[#FFB400] text-[40px] font-bold leading-[1]  ">
           Order Online
@@ -28,7 +28,7 @@ const ServicesCards = () => {
           Convenient Pickup and Delivery Services
         </h2>
       </div>
-      <div className="max-w-[1300px] mx-auto px-4 grid lg:grid-cols-3 md:grid-cols-2"
+      <div className=" gap-12 grid lg:grid-cols-3 md:grid-cols-2"
       data-aos="fade-left"
       data-aos-duration="3000">
         {data.map((data, index) => {

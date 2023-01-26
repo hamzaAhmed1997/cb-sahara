@@ -4,8 +4,8 @@ const SaharaMarket = ({order}) => {
   return (
     <div className="w-full py-[80px] bg-[#6A0000] my-[60px]">
       <div className=" max-w-[1140px] w-full mx-auto px-4">
-        <div className={` max-w-[1090px] ${order==1?"grid && md:grid-cols-3":"null"}`}>
-          <div className="md:p-[15px] md:col-span-2 ">
+        <div className={` max-w-[1090px] ${order==1?"grid && md:grid-cols-3":null}`}>
+          <div className={`md:p-[15px] ${order==1?"md:col-span-2":null}`}>
            <div>
              <p className="text-center text-[#FFFFFF] text-[24px] font-500 mb-[15px] ">
               Welcome to
@@ -30,13 +30,15 @@ const SaharaMarket = ({order}) => {
             </p>
           </div>
          <div className="">
-         {order==1 ? <div className="flex md:items-end justify-center py-[30px] md:py-[70px] md:px-[10px]">
+         {order==1 ? <div className="flex md:items-end justify-center py-[30px] md:py-[70px] md:px-[10px]"
+           data-aos="fade-left"
+           data-aos-duration="3000">
           <img
               src="https://saharamkt.com/wp-content/uploads/2020/01/Restaurant_ed3850622aa2ae55b80492a7fa935d02.jpg"
               alt=""
               className="shadow "
             />
-          </div>: "bg-green-500"}
+          </div>: null}
          </div>
         </div>
       </div>

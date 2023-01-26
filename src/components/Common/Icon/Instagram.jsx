@@ -2,24 +2,11 @@ import React from "react";
 
 export const Instagram = ({ props }) => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="icon icon-tabler icon-tabler-clock"
-      width={20}
-      height={20}
-      viewBox="0 0 24 24"
-      strokeWidth="2.5"
-      stroke="#E4F3F3"
-      fill="none"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-labelledby="Clock"
-      aria-label="Clock"
-      {...props}
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <circle cx={12} cy={12} r={9} />
-      <polyline points="12 7 12 12 15 15" />
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round" >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <rect x="4" y="4" width="16" height="16" rx="4" />
+    <circle cx="12" cy="12" r="3" />
+    <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+  </svg>
   );
 };

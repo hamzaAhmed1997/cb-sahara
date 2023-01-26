@@ -54,13 +54,13 @@ const ImageSlider = () => {
       };
   return (
     <div className="mt-[20px] mb-[10px]  sm:mt-[40px] sm:mb-[30px] md:mt-[70px]">
-    <div className=" py-[60px] bg-[#FFB400]">
-      <div className='max-w-[1090px] mx-auto cursor-grabbing'>
+    <div className="w-full py-[60px] bg-[#FFB400]">
+      <div className='max-w-[1090px] mx-auto cursor-grabbing '>
       <Slider {...settings} >
         {data.map((item, index) => {
           return (
-           <div key={index} className="max-w-[360px] px-2 ">
-            <img  src={item.image} className=" max-w-[100%] mx-auto" loading='lazy' alt='Image slider'></img>
+           <div key={index} className="px-3 ">
+            <img  src={item.image} className="" loading='lazy' alt='Image slider'></img>
            </div>
           );
         })}
