@@ -3,11 +3,11 @@ import CommonHero from '../Common/CommonHero'
 import ContactForm from './ContactForm'
 import KeepInTouch from './KeepInTouch'
 
-export default function ContactPage() {
+export default function ContactPage({data}) {
   return (
     <div>
-      <CommonHero/>
-      <KeepInTouch/>
+      <CommonHero data={data?.image}/>
+      <KeepInTouch data={data?.contactus}/>
       <ContactForm/>
     </div>
   )
