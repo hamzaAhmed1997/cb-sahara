@@ -261,6 +261,7 @@ const images1 = [
                    )
                 }
               </div>
+              
               <div className="w-1/2 p-1 md:p-2">
               {
                   data?.galleryimg[10]?.image?.data !==null && (
