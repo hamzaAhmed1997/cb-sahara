@@ -1,48 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./style.module.css";
 import Link from "next/link";
-// import SubMenu from "../../Components/Common/";
+const data = [
+  { title: "HOME", link: "#" },
+  { title: "STORE", link: "#" },
+  { title: "GALLERY", link: "#" },
+  { title: "CONTACT", link: "#" },
+  { title: "ORDER ONLINE", link: "#" },
+];
 
-const navCat =[
-  {title: "Restorant"}
-]
-const PatientPage =[
-  {title: "Restorant"}
-]
-const navItems =[
-  {title:"Home" , link:"/"},
-   {title:"Home"},
-   {title:"Home"},
-   {title:"Home"},
-   {title:"Home"},
-]
-
-
+const dropdown = [{ title: "Dropdown" }, { title: "Dropdown" }];
+const dropdownPage = [{ title: "DropdownPage" }, { title: "DropdownPage" }];
 const Hamburger = ({
-  isSubMenu,
-  isSubMenu3,
+  isSubMenu1,
+  isSubMenu2,
   isMenu,
-  setIsSubmenu,
+  setIsSubmenu1,
   setIsSubmenu2,
-  setIsSubmenu3,
   setIsMenu,
-
+  // data,
+  // dropdown,
+  // dropdownPage,
 }) => {
-  const [showServices, setShowServices] = useState();
   return (
     <>
       {" "}
       {!isMenu && (
         <span
           onClick={() => setIsMenu(!isMenu)}
-          className="px-4 transition-all duration-500 ease-linear"
+          className="transition-all duration-500 ease-linear px-4"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="35"
-            strokeWidth="3.5"
-            fill="#E4951C"
+            width="22"
+            height="22"
+            fill="currentColor"
             className="bi bi-list"
             viewBox="0 0 16 16"
           >
@@ -56,16 +48,15 @@ const Hamburger = ({
       {isMenu && (
         <span
           onClick={() => {
-            setIsMenu(!isMenu), setIsSubmenu(false), setIsSubmenu2(false);
+            setIsMenu(!isMenu), setIsSubmenu1(false), setIsSubmenu2(false);
           }}
-          className="px-4 transition-all duration-500 ease-linear"
+          className="transition-all duration-500 ease-linear px-4"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            strokeWidth="3.5"
-            fill="#E4951C"
+            width="22"
+            height="22"
+            fill="currentColor"
             className="bi bi-x-lg"
             viewBox="0 0 16 16"
           >
@@ -74,24 +65,24 @@ const Hamburger = ({
         </span>
       )}
       {isMenu && (
-        <div className="bg-white  z-50 min-h-[300px] absolute left-0 top-[63px] w-full shadow-lg">
-          {navItems.map((item, index) => (
+        <div className="bg-white  z-50 min-h-[200px] absolute left-0 top-[130px] w-full shadow-lg">
+          {data?.map((item, index) => (
             <ul key={index} className="w-full">
               <li
-                className={`px-[30px] py-[21px]  cursor-pointer transition-all ease duration-500 ${styles.cusHover}`}
+                className={`px-[30px] py-[6px]  cursor-pointer transition-all ease duration-500 ${styles.cusHover}`}
               >
                 <div className="inline-flex">
                   <>
                     {" "}
                     <div
                       onClick={() => {
-                        index === 1 && setIsSubmenu(!isSubMenu),
-                          index === 4 && setIsSubmenu3(!isSubMenu3);
+                        index === 2 && setIsSubmenu1(!isSubMenu1),
+                          index === 3 && setIsSubmenu2(!isSubMenu2);
                       }}
                       className={`inline-flex  cursor-pointer ${styles.cusMenu} flex-col`}
                     >
                       <p
-                        className={`text-[15px]  leading-[20px] font-[600] text-[#0a1931] transition-all ease duration-500 inline-flex items-center gap-[6px] ${styles.hoverText}`}
+                        className={`text-[11px]  leading-[11px] font-[700] text-[#9A0000] transition-all ease duration-500 inline-flex items-center gap-[6px] ${styles.hoverText}`}
                       >
                         <Link href={`${item.link}`} legacyBehavior>
                           <a href={`${item.link}`}>{item.title}</a>
@@ -112,7 +103,6 @@ const Hamburger = ({
                               </svg>
                             </>
                           )}
-
                           {index === 4 && (
                             <>
                               <span>
@@ -136,30 +126,28 @@ const Hamburger = ({
                 </div>
               </li>
               <>
-              {index === 1 && (
+                {index === 1 && (
                   <>
-                    {isSubMenu3 && (
+                    {isSubMenu1 && (
                       <div
                         className={` w-full transition-all duration-3000 ease  z-50 bg-white  `}
                       >
                         <ul className={` bg-white`}>
-                          {navCat.map((item, index) => (
+                          {dropdownPage?.map((item, index) => (
                             <Link
                               key={index}
-                              // href={item.link || "/"}
+                              href={item.link || "/"}
                               legacyBehavior
                             >
-                              <a href="" className="">
-                                <li
-                                  className={`px-[30px] py-[13px] text-black transition-all ease duration-500 ${styles.cusHover}`}
+                              <li
+                                className={`px-[30px] py-[13px] transition-all ease duration-500 ${styles.cusHover}`}
+                              >
+                                <p
+                                  className={`${styles.hoverText} transition-all ease duration-500 text-[12px] leading-[15px] pl-[10px]`}
                                 >
-                                  <p
-                                    className={`${styles.hoverText} transition-all ease duration-500 text-[12px] leading-[15px] pl-[10px]`}
-                                  >
-                                    {item.title}
-                                  </p>
-                                </li>
-                              </a>
+                                  {item.title}
+                                </p>
+                              </li>
                             </Link>
                           ))}
                         </ul>
@@ -169,16 +157,15 @@ const Hamburger = ({
                 )}
                 {index === 4 && (
                   <>
-                    {isSubMenu3 && (
+                    {isSubMenu2 && (
                       <div
                         className={` w-full transition-all duration-3000 ease  z-50 bg-white  `}
                       >
                         <ul className={` bg-white`}>
-                          {PatientPage.map((item, index) => (
+                          {dropdownPage?.map((item, index) => (
                             <Link
                               key={index}
-                              // href={item.link || "/"}
-                              href={""}
+                              href={item.link || "/"}
                               legacyBehavior
                             >
                               <a href="" className="">
@@ -188,7 +175,7 @@ const Hamburger = ({
                                   <p
                                     className={`${styles.hoverText} transition-all ease duration-500 text-[12px] leading-[15px] pl-[10px]`}
                                   >
-                                    {item.title}
+                                    {item?.title}
                                   </p>
                                 </li>
                               </a>
