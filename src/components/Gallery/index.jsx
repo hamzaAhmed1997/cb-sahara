@@ -5,75 +5,80 @@ import "slick-carousel/slick/slick-theme.css";
 import Herogallery from '@/src/components/Gallery/Herogallery'
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
-import { adminPath } from '@/utils/constants';
 import { imageResolver } from '@/utils/helpers';
 
-const gallerydata = 
+
+
+
+
+const index = ({data}) => {
+  const gallerydata = 
 [
   {
-    image: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0188.jpg",
+    image: (imageResolver(data?.galleryimgslider[0]?.image).path),
   },
   {
-    image: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0190.jpg",
+    image: (imageResolver(data?.galleryimgslider[1]?.image).path),
   },
   {
-    image: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0191.jpg",
+    image: (imageResolver(data?.galleryimgslider[2]?.image).path),
   },
   {
-    image: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0194.jpg",
+    image: (imageResolver(data?.galleryimgslider[3]?.image).path),
   },
   {
-    image: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0198.jpg",
+    image: (imageResolver(data?.galleryimgslider[4]?.image).path),
   },
   {
-    image: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0200.jpg",
+    image: (imageResolver(data?.galleryimgslider[5]?.image).path),
   },
   {
-    image: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0202.jpg",
+    image: (imageResolver(data?.galleryimgslider[6]?.image).path),
   },
   {
-    image: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0204.jpg",
+    image: (imageResolver(data?.galleryimgslider[7]?.image).path),
   },
   {
-    image: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0205.jpg",
+    image: (imageResolver(data?.galleryimgslider[8]?.image).path),
   },
   {
-    image: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0207.jpg",
+    image: (imageResolver(data?.galleryimgslider[9]?.image).path),
   },
   
 ];
+
 const images = [
-  { title: "1", caption: "Image 1", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0119.jpg" },
-  { title: "2", caption: "Image 2", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0121.jpg" },
-  { title: "3", caption: "Image 3", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0141.jpg" },
-  { title: "4", caption: "Image 4", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0148.jpg" },
-  { title: "5", caption: "Image 5", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0149.jpg" },
-  { title: "6", caption: "Image 6", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0156.jpg" },
-  { title: "7", caption: "Image 7", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0161.jpg" },
-  { title: "8", caption: "Image 8", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0162.jpg" }, 
-  { title: "9", caption: "Image 9", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0165.jpg" },
-  { title: "10", caption: "Image 10", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0186.jpg" },
-  { title: "11", caption: "Image 11", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0149.jpg" },
-  { title: "12", caption: "Image 12", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0141.jpg" },
+  { title: "1", caption: "Image 1", url: (imageResolver(data?.galleryimg[0]?.image).path), },
+  { title: "2", caption: "Image 2", url: (imageResolver(data?.galleryimg[1]?.image).path), },
+  { title: "3", caption: "Image 3", url: (imageResolver(data?.galleryimg[2]?.image).path), },
+  { title: "4", caption: "Image 4", url: (imageResolver(data?.galleryimg[3]?.image).path), },
+  { title: "5", caption: "Image 5", url: (imageResolver(data?.galleryimg[4]?.image).path), },
+  { title: "6", caption: "Image 6", url: (imageResolver(data?.galleryimg[5]?.image).path), },
+  { title: "7", caption: "Image 7", url: (imageResolver(data?.galleryimg[6]?.image).path), },
+  { title: "8", caption: "Image 8", url: (imageResolver(data?.galleryimg[7]?.image).path), }, 
+  { title: "9", caption: "Image 9", url: (imageResolver(data?.galleryimg[8]?.image).path), },
+  { title: "10", caption: "Image 10", url: (imageResolver(data?.galleryimg[9]?.image).path), },
+  { title: "11", caption: "Image 11", url: (imageResolver(data?.galleryimg[10]?.image).path), },
+  { title: "12", caption: "Image 12", url: (imageResolver(data?.galleryimg[11]?.image).path), },
 
 ];
 
 const images1 = [
-  { title1: "1", caption: "Image 1", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0230.jpg" },
-  { title1: "2", caption: "Image 2", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0234.jpg" },
-  { title1: "3", caption: "Image 3", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0235.jpg" },
-  { title1: "4", caption: "Image 4", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0238.jpg" },
-  { title1: "5", caption: "Image 5", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0246.jpg" },
-  { title1: "6", caption: "Image 6", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0247.jpg" },
-  { title1: "7", caption: "Image 7", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0250.jpg" },
-  { title1: "8", caption: "Image 8", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0253.jpg" }, 
-  { title1: "9", caption: "Image 9", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0256.jpg" },
-  { title1: "10", caption: "Image 10", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0258.jpg" },
-  { title1: "11", caption: "Image 11", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0268.jpg" },
-  { title1: "12", caption: "Image 12", url: "https://saharamkt.com/wp-content/uploads/2020/04/IMG_0289.jpg" },
+  { title1: "1", caption: "Image 1", url: (imageResolver(data?.multipleimage[0]?.image).path),  },
+  { title1: "2", caption: "Image 2", url: (imageResolver(data?.multipleimage[1]?.image).path),  },
+  { title1: "3", caption: "Image 3", url: (imageResolver(data?.multipleimage[2]?.image).path),  },
+  { title1: "4", caption: "Image 4", url: (imageResolver(data?.multipleimage[3]?.image).path),  },
+  { title1: "5", caption: "Image 5", url: (imageResolver(data?.multipleimage[4]?.image).path),  },
+  { title1: "6", caption: "Image 6", url: (imageResolver(data?.multipleimage[5]?.image).path),  },
+  { title1: "7", caption: "Image 7", url: (imageResolver(data?.multipleimage[6]?.image).path),  },
+  { title1: "8", caption: "Image 8", url: (imageResolver(data?.multipleimage[7]?.image).path),  }, 
+  { title1: "9", caption: "Image 9", url: (imageResolver(data?.multipleimage[8]?.image).path),  },
+  { title1: "10", caption: "Image 10", url: (imageResolver(data?.multipleimage[9]?.image).path),  },
+  { title1: "11", caption: "Image 11", url: (imageResolver(data?.multipleimage[10]?.image).path),  },
+  { title1: "12", caption: "Image 12", url: (imageResolver(data?.multipleimage[11]?.image).path),  },
 
 ];
-const index = () => {
+  console.log("multiple images", data)
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenm, setIsOpenm] = useState(false);
 
@@ -110,7 +115,7 @@ const index = () => {
       };
   return (
     <div className="pt-16">
-    <Herogallery/>
+    <Herogallery data={data?.herogallery}/>
       {isOpen && <Lightbox
         imageTitle={images[imgIndex].title}
         imageCaption={images[imgIndex].caption}
@@ -140,95 +145,143 @@ const index = () => {
             <div className="flex flex-wrap w-1/2">
                 
               <div className="w-1/2 p-1 md:p-2">
-                <img
+                {
+                  data?.galleryimg[0]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0119.jpg"
+                  src={imageResolver(data?.galleryimg[0]?.image).path}
                 />
+                   )
+                }
               </div>
               
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.galleryimg[1]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0121.jpg"
+                  src={imageResolver(data?.galleryimg[1]?.image).path}
                 />
+                   )
+                }
               </div>
               <div className="w-full p-1 md:p-2">
-                <img
+              {
+                  data?.galleryimg[2]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0129.jpg"
+                  src={imageResolver(data?.galleryimg[2]?.image).path}
                 />
+                   )
+                }
               </div>
             </div>
             <div className="flex flex-wrap w-1/2">
               <div className="w-full p-1 md:p-2">
-                <img
+              {
+                  data?.galleryimg[3]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0141.jpg"
+                  src={imageResolver(data?.galleryimg[3]?.image).path}
                 />
+                   )
+                }
               </div>
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.galleryimg[4]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0148.jpg"
+                  src={imageResolver(data?.galleryimg[4]?.image).path}
                 />
+                   )
+                }
               </div>
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.galleryimg[5]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0149.jpg"
+                  src={imageResolver(data?.galleryimg[5]?.image).path}
                 />
+                   )
+                }
               </div>
             </div>
             <div className="flex flex-wrap w-1/2">
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.galleryimg[6]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0156.jpg"
+                  src={imageResolver(data?.galleryimg[6]?.image).path}
                 />
+                   )
+                }
               </div>
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.galleryimg[7]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0161.jpg"
+                  src={imageResolver(data?.galleryimg[7]?.image).path}
                 />
+                   )
+                }
               </div>
               <div className="w-full p-1 md:p-2">
-                <img
+              {
+                  data?.galleryimg[8]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0162.jpg"
+                  src={imageResolver(data?.galleryimg[8]?.image).path}
                 />
+                   )
+                }
               </div>
             </div>
             <div className="flex flex-wrap w-1/2">
               <div className="w-full p-1 md:p-2">
-                <img
+              {
+                  data?.galleryimg[9]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0165.jpg"
+                  src={imageResolver(data?.galleryimg[9]?.image).path}
                 />
+                   )
+                }
               </div>
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.galleryimg[10]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0186.jpg"
+                  src={imageResolver(data?.galleryimg[10]?.image).path}
                 />
+                   )
+                }
               </div>
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.galleryimg[11]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0149.jpg"
+                  src={imageResolver(data?.galleryimg[11]?.image).path}
                 />
+                   )
+                }
               </div>
             </div>
            
@@ -262,95 +315,143 @@ const index = () => {
             <div className="flex flex-wrap w-1/2">
                 
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.multipleimage[0]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0230.jpg"
+                  src={imageResolver(data?.multipleimage[0]?.image).path}
                 />
+                   )
+                }
               </div>
               
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.multipleimage[1]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0234.jpg"
+                  src={imageResolver(data?.multipleimage[1]?.image).path}
                 />
+                   )
+                }
               </div>
               <div className="w-full p-1 md:p-2">
-                <img
+              {
+                  data?.multipleimage[2]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0235.jpg"
+                  src={imageResolver(data?.multipleimage[2]?.image).path}
                 />
+                   )
+                }
               </div>
             </div>
             <div className="flex flex-wrap w-1/2">
               <div className="w-full p-1 md:p-2">
-                <img
+              {
+                  data?.multipleimage[3]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0238.jpg"
+                  src={imageResolver(data?.multipleimage[3]?.image).path}
                 />
+                   )
+                }
               </div>
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.multipleimage[4]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0246.jpg"
+                  src={imageResolver(data?.multipleimage[4]?.image).path}
                 />
+                   )
+                }
               </div>
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.multipleimage[5]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0247.jpg"
+                  src={imageResolver(data?.multipleimage[5]?.image).path}
                 />
+                   )
+                }
               </div>
             </div>
             <div className="flex flex-wrap w-1/2">
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.multipleimage[6]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0250.jpg"
+                  src={imageResolver(data?.multipleimage[6]?.image).path}
                 />
+                   )
+                }
               </div>
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.multipleimage[7]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0253.jpg"
+                  src={imageResolver(data?.multipleimage[7]?.image).path}
                 />
+                   )
+                }
               </div>
               <div className="w-full p-1 md:p-2">
-                <img
+              {
+                  data?.multipleimage[8]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0256.jpg"
+                  src={imageResolver(data?.multipleimage[8]?.image).path}
                 />
+                   )
+                }
               </div>
             </div>
             <div className="flex flex-wrap w-1/2">
               <div className="w-full p-1 md:p-2">
-                <img
+              {
+                  data?.multipleimage[9]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0258.jpg"
+                  src={imageResolver(data?.multipleimage[9]?.image).path}
                 />
+                   )
+                }
               </div>
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.multipleimage[10]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0268.jpg"
+                  src={imageResolver(data?.multipleimage[10]?.image).path}
                 />
+                   )
+                }
               </div>
               <div className="w-1/2 p-1 md:p-2">
-                <img
+              {
+                  data?.multipleimage[11]?.image?.data !==null && (
+                    <img
                   alt="gallery"
                   className="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0289.jpg"
+                  src={imageResolver(data?.multipleimage[11]?.image).path}
                 />
+                   )
+                }
               </div>
             </div>
           </div>
