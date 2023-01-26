@@ -15,8 +15,8 @@ const CardItem = ({ title,button,link, image }) => {
           <div class="text absolute top-[50%] left-[50%] ">
             <h2 className="text-[#FFB400] font-bold leading-[1] text-[24px]">{title}</h2>
             <Link href={`${link}`}>
-          <button className="mt-[20px] text-[#6A0000] bg-[#FFB400] transition text-center text-[16px]  font-bold leading-[1] py-[15px] px-[30px] rounded">
-            {button}
+          <button className="mt-[20px] text-[#6A0000] bg-[#FFB400] transition text-center text-[16px]  font-bold leading-[1] py-[15px] px-[10px] rounded duration-300 transition-all hover:bg-[#6A0000] hover:text-[#FFC648] hover:border-[#FFC648] border-[2px] border-[#6A0000]">
+            {button} 
           </button>
         </Link>
           </div>
