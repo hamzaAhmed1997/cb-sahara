@@ -8,7 +8,7 @@ export default function contact({pageData, siteData}) {
   return (
     <div>
       <Layout>
-        <ContactPage data={pageData}/>
+        <ContactPage contact={siteData?.contact} data={pageData}/>
       </Layout>
     </div>
   )
