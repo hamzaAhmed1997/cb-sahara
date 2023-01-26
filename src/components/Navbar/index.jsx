@@ -12,7 +12,7 @@ const data = [
   { title: "Contact", link: "/contact" },
   { title: "Order Online", link: "#" },
 ];
-const Navbar = ({data}) => {
+const Navbar = () => {
   const about = [{ title: "Meat", link: "#" }];
   const orderOnline = [
     { title: "RESTAURANT", link: "#" },

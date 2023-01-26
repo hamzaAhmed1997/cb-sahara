@@ -7,7 +7,7 @@ export default function Home({pageData, siteData}) {
   console.log("home page data", siteData);
   return (
     <>
-      <Layout data={siteData}>
+      <Layout >
         <HomePage data={pageData}/>
       </Layout>
     </>

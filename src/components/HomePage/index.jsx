@@ -12,7 +12,6 @@ import ContactForm from "../ContactPage/ContactForm";
 import ContactMap from "./ContactMap";
 
 const HomePage = ({data}) => {
-  console.log("services cards data",data);
   const order = 1;
   const position="1"
   return (

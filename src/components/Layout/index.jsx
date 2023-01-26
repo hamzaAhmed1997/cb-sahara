@@ -7,7 +7,7 @@ export default function Layout({data, children}) {
   return (
     <div>
       <Header/>
-        <Navbar data={data?.navbar}/>
+        <Navbar />
         <div>{children}</div>
         <Footer/>
     </div>
