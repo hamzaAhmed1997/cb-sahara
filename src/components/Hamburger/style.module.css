@@ -1,0 +1,6 @@
+.cusHover:hover{
+    background: #0a1931;
+}
+.cusHover:hover .hoverText{
+    color:white !important
+}

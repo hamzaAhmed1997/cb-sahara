@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import SubMenu from "./subMenu";
 import TopCard from "./TopCard";
-import Hamburger from "./Hamburger";
+import Hamburger from "../Hamburger";
 
 const data = [
   { title: "Home", link: "/" },
@@ -24,6 +24,9 @@ const Navbar = () => {
   const currentRoute = router.pathname.slice(0);
   const [isSubMenu, setIsSubmenu] = useState(false);
   const [isSubMenu1, setIsSubmenu1] = useState(false);
+  const [isMenu, setIsMenu] = useState(false);
+  const [isSubMenu2, setIsSubmenu2] = useState(false);
+  const [isSubMenu3, setIsSubmenu3] = useState(false);
   return (
     <div className="fixed top-0 z-50 w-full mx-auto">
       <div className="transition ">
@@ -31,7 +34,7 @@ const Navbar = () => {
       </div>
       <div className=" shadow-lg bg-[#ffffff]">
         <nav>
-          <div className="container max-w-[1140px] mx-auto  lg:flex justify-between flex-wrap py-[20px]  flex-row items-center px-[12px]">
+          <div className=" max-w-[1140px] mx-auto flex justify-between  py-[20px]  flex-row items-center px-[12px]">
             <div className="hover:cursor-pointer w-[177px] h-[44px]">
               <Link href={"/"} legacyBehavior>
                 <a href={"/"}>
@@ -121,7 +124,17 @@ const Navbar = () => {
               </div>
             </div>
             <div className="lg:hidden flex items-center lg:bg-white  h-[32px] w-[40px] justify-center ">
-              <Hamburger />
+              <Hamburger
+                isMenu={isMenu}
+                setIsMenu={setIsMenu}
+                isSubMenu={isSubMenu}
+                isSubMenu2={isSubMenu2}
+                isSubMenu3={isSubMenu3}
+                setIsSubmenu={setIsSubmenu}
+                setIsSubmenu1={setIsSubmenu}
+                setIsSubmenu2={setIsSubmenu2}
+                setIsSubmenu3={setIsSubmenu3}
+              />
             </div>
           </div>
         </nav>
