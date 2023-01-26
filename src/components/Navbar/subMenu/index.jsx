@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from "../style.module.css";
 import Link from "next/link"
-const SubMenu = ({dropdown,setIsSubmenu}) => { 
+const SubMenu = ({dropdown,setIsSubmenu, small}) => { 
     return (
         <>
             <div
                 onMouseEnter={() => setIsSubmenu(true)}
                 onMouseLeave={() => setIsSubmenu(false)}
-                className={`absolute top-[30px] left-[0px]  w-[150px] transition-all duration-3000 ease  z-50 bg-white`}
+                className={`absolute top-[40px] left-[0px]  ${small? "w-[120px]" : "w-[200px]"} transition-all duration-3000 ease  z-50 bg-white`}
             >
                 <ul className={` bg-white`}>
                     {dropdown?.map((item, index) => (
