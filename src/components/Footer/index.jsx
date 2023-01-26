@@ -41,12 +41,13 @@ export default function Footer() {
             and catering in the largest Halal market in Northern California.
           </p>
           <div className="flex gap-x-[15px] items-center justify-center sm:justify-start mt-[20px]">
-            <div><Facebook width={18} height={18}/> </div>
-            <div><Twitter/> </div>
-            <div><Google width={18} height={18}/> </div>
-            <div><Instagram/> </div>
-            <div><Youtube/> </div>
-            <div><Linkedin/> </div>
+          
+           <Link href={""} legacyBehavior><a href=""> <span><Facebook className="hover:fill-[#FFB400] transition-all duration-300" width={22} height={22}/> </span></a></Link>
+           <Link href={""} legacyBehavior><a href=""> <span><Twitter className="hover:fill-[#FFB400] transition-all duration-300" /> </span></a></Link>
+           <Link href={""} legacyBehavior><a href=""> <span><Google className="hover:stroke-[#FFB400] transition-all duration-300" width={18} height={18}/> </span></a></Link>
+           <Link href={""} legacyBehavior><a href=""> <span><Instagram className="hover:fill-[#FFB400] transition-all duration-300" /> </span></a></Link>
+           <Link href={""} legacyBehavior><a href=""> <span><Youtube className="hover:fill-[#FFB400] transition-all duration-300" /> </span></a></Link>
+           <Link href={""} legacyBehavior><a href=""> <span><Linkedin className="hover:fill-[#FFB400] transition-all duration-300" width={18} height={16}/> </span></a></Link>
           </div>
         </div>
         <div className="md:w-[50%] sm:flex mt-[50px] md:mt-0">

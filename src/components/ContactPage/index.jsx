@@ -8,7 +8,7 @@ export default function ContactPage({data}) {
     <div>
       <CommonHero data={data?.image}/>
       <KeepInTouch data={data?.contactus}/>
-      <ContactForm/>
+      <ContactForm data={data?.contact}/>
     </div>
   )
 }
