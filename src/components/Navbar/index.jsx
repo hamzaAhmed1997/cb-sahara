@@ -13,7 +13,6 @@ const Mydata = [
   { title: "Order Online", link: "#" },
 ];
 const Navbar = ({ data }) => {
-  console.log("data>>>>>>>>>>>>>>>>>Nav________", data);
 
   const about = [{ title: "Meat", link: "#" }];
   const orderOnline = [

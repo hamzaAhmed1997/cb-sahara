@@ -4,10 +4,9 @@ import React from 'react'
 import { adminPath } from '@/utils/constants'
 
 export default function contact({pageData, siteData}) {
-  console.log('data is here', pageData)
   return (
     <div>
-      <Layout>
+      <Layout data={siteData}>
         <ContactPage contact={siteData?.contact} data={pageData}/>
       </Layout>
     </div>
