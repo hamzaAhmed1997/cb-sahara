@@ -3,11 +3,11 @@ import HomePage from "@/src/components/HomePage";
 import Layout from "@/src/components/Layout";
 import { adminPath } from "@/utils/constants";
 
-export default function Home({pageData}) {
-  console.log("home page data", pageData);
+export default function Home({pageData, siteData}) {
+  console.log("home page data", siteData);
   return (
     <>
-      <Layout>
+      <Layout data={siteData}>
         <HomePage data={pageData}/>
       </Layout>
     </>

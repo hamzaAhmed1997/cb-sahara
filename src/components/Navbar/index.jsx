@@ -12,7 +12,7 @@ const data = [
   { title: "Contact", link: "/contact" },
   { title: "Order Online", link: "#" },
 ];
-const Navbar = () => {
+const Navbar = ({data}) => {
   const about = [{ title: "Meat", link: "#" }];
   const orderOnline = [
     { title: "RESTAURANT", link: "#" },
@@ -49,7 +49,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center">
               <div className="mx-[5px] hidden lg:flex items-center text-[#6A0000] leading-[1em] text-[16px] font-[600] gap-x-[20px] ">
-                {data.map((item, index) => (
+                {data?.navitems?.map((item, index) => (
                   // ${item.link}
                   <Link href={item.link} legacyBehavior key={index}>
                     <div
