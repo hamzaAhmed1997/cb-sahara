@@ -41,7 +41,7 @@ const Hamburger = ({
       {isMenu && (
         <span
           onClick={() => {
-            setIsMenu(!isMenu), setIsSubmenu1(false), setIsSubmenu2(false);
+            setIsMenu(!isMenu), setIsSubmenu1(false), setIsSubmenu(false);
           }}
           className="transition-all duration-500 ease-linear px-4"
         >

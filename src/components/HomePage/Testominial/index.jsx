@@ -90,7 +90,7 @@ const Testimonial = () => {
     ],
   };
   return (
-    <div className="w-full py-[80px] bg-[#6A0000] my-[60px]">
+    <div className="py-[80px] bg-[#6A0000] my-[60px]">
      <div className="p-[15px] max-w-[1140px] mx-auto">
      <div className=" w-full px-4">
         <div className=" max-w-[1110px] p-[10px] ">
