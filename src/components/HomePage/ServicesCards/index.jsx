@@ -1,20 +1,7 @@
 import React from "react";
 import CardItem from "./CardItem";
 
-const data = [
-  {
-    title: "Restaurant",
-    img: "https://saharamkt.com/wp-content/uploads/2022/03/restaurant.jpg",
-  },
-  {
-    title: "Restaurant",
-    img: "https://saharamkt.com/wp-content/uploads/2022/03/restaurant.jpg",
-  },
-  {
-    title: "Restaurant",
-    img: "https://saharamkt.com/wp-content/uploads/2022/03/restaurant.jpg",
-  },
-];
+
 
 const ServicesCards = ({data}) => {
   return (
@@ -34,7 +21,7 @@ const ServicesCards = ({data}) => {
         {data?.orderCard?.map((item, index) => {
           return (
             <div key={index}>
-              <CardItem title={item?.cardtext} button={item?.ctatext} link={item?.link} image={item?.cardimage} />
+              <CardItem title={item?.cardtext} button={item?.ctatext} link={item?.ctalink} image={item?.cardimage} />
             </div>
           );
         })}
