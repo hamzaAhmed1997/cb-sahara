@@ -276,6 +276,7 @@ const index = () => {
                   src="https://saharamkt.com/wp-content/uploads/2020/04/IMG_0234.jpg"
                 />
               </div>
+              
               <div className="w-full p-1 md:p-2">
                 <img
                   alt="gallery"
