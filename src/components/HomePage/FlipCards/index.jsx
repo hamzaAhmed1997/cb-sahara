@@ -37,7 +37,7 @@ const FlipCards = () => {
     <div className="w-full my-[30px]">
       <div className=" max-w-[1140px] w-full mx-auto px-4" data-aos="fade-right"
          data-aos-duration="3000">
-        <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3"
+        <div className="w-full  grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3"
         >
           {data.map((item, index) => {
             return (

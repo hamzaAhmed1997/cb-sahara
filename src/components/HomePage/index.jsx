@@ -24,7 +24,7 @@ const HomePage = () => {
       <ImageSlider />
       <HomeFoodSection order={order} position={position} />
       <HomeSingleSlider />
-      <SaharaMarket/>
+      <SaharaMarket order={order}/>
       <HomeFoodSection />
       <HomeSingleSlider />
       <HomeFoodSection />
