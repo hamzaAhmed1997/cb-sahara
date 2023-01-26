@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Facebook from "../Common/Icon/Facebook";
+import Twitter from "../Common/Icon/Twitter";
+import Google from "../Common/Icon/Google";
+import { Youtube } from "../Common/Icon/Youtube";
+import Linkedin from "../Common/Icon/Linkedin";
+import { Instagram } from "../Common/Icon/Instagram";
+
 const mydata = [
   { title: "Home", link: "/" },
   { title: "Store", link: "/store" },
@@ -23,7 +30,7 @@ export default function Footer() {
   const [isSubMenu1, setIsSubmenu1] = useState(false);
   return (
     <div className="bg-[#6A0000]">
-      <div className="max-w-[1140px] mx-auto px-4 md:flex pt-[60px] justify-between">
+      <div className="max-w-[1140px] mx-auto px-4 md:flex pt-[60px] justify-between text-center sm:text-start">
         <div className="md:w-[40%]">
           <div className="max-w-[300px] h-[80px] mb-[15px]">
             <img className="w-full h-full" src="images/footerlogo.png" />
@@ -33,9 +40,17 @@ export default function Footer() {
             grocery, bakery, fresh produce, Halal meat and chicken, restaurant,
             and catering in the largest Halal market in Northern California.
           </p>
+          <div className="flex gap-x-[15px] items-center justify-center sm:justify-start mt-[20px]">
+            <div><Facebook width={18} height={18}/> </div>
+            <div><Twitter/> </div>
+            <div><Google width={18} height={18}/> </div>
+            <div><Instagram/> </div>
+            <div><Youtube/> </div>
+            <div><Linkedin/> </div>
+          </div>
         </div>
         <div className="md:w-[50%] sm:flex mt-[50px] md:mt-0">
-          <div className="w-1/2 px-4">
+          <div className="px-4 sm:w-1/2">
             <h2 className="text-[20px] leading-[30px] text-white font-bold">QUICK LINKS</h2>
             <div className="mt-[20px]">
               {mydata.map((item, index) => (
@@ -45,11 +60,11 @@ export default function Footer() {
                       index === 1 && setIsSubmenu(true),
                         index === 4 && setIsSubmenu1(true);
                     }}
-                    className="text-[16px] leading-[35px] text-[#ffffff]  hover:text-[#FFC648] transition font-semibold tracking-[1px]"
+                    className=""
                   >
                     <a
                       href={item.link}
-                      className={`  ${
+                      className={` text-[16px] leading-[35px] text-[#ffffff]  hover:text-[#FFC648] transition font-semibold tracking-[1px] ${
                         currentRoute === item.link
                           ? "text-[#FFC648] border-b-[2px] border-[#FFC648]"
                           : ""
@@ -78,8 +93,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="mt-[30px]">
-        <p className="text-center text-[14px] leading-[14px] font-[400] text-white py-[20px] px-4">
+      <div className="max-w-[1140px] px-4 mx-auto h-[1px] bg-white mt-[30px] "/>
+      <div className="">
+        <p className="text-center text-[14px] font-[400] text-white py-[20px] px-4">
           © 2022
           <span className="hover:text-[#FFC648] transition-all duration-300 font-[500]">
             <Link href={"/"} legacyBehavior>

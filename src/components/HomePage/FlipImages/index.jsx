@@ -31,7 +31,7 @@ const FlipImages = () => {
             return (
               <div key={index}>
                 <div class="flip-card w-[139px] h-[139px] mx-auto">
-                  <div class="flip-card-inner relative ">
+                  <div class="flip-card-inner relative w-full h-full ">
                     <div class="flip-card-front absolute">
                       <img src={item.img} alt="Avatar" />
                     </div>

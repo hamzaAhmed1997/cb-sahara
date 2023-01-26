@@ -5,9 +5,6 @@
 .transition { 
     transition-delay: 0.1s;
     transition-duration: 0.4s;
- 
-    transition-duration: 0.3s;
- 
     transition-timing-function: ease;
   }
 
@@ -31,13 +28,12 @@
 }
 
 .flip-card-inner {
-  transition: transform 0.8s;
+  transition: transform 0.9s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
 }
 
 .flip-card-front, .flip-card-back {
@@ -46,13 +42,11 @@
 }
 
 .flip-card-back {
-  transform: rotateY(180deg);
+  transform: rotateX(-180deg);
 }
 
 /* /// */
 .flip-cards {
-  /* width: 300px;
-  height: 300px; */
   perspective: 1000px;
 }
 
@@ -60,12 +54,12 @@
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.9s;
+  transition: transform 1s;
   transform-style: preserve-3d;
 }
 
 .flip-cards:hover .flip-cards-inner {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
 }
 
 .flip-cards-front, .flip-cards-back {
@@ -84,12 +78,5 @@
   height: 100%;
 }
 .flip-cards-back {
-  transform: rotateY(180deg);
-}
-
-.tahira{
- 
-}
-.saima{
-  background-color: red;
+  transform: rotateX(-180deg);
 }
