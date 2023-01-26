@@ -11,7 +11,7 @@ import FlipCards from "./FlipCards";
 import ContactForm from "../ContactPage/ContactForm";
 import ContactMap from "./ContactMap";
 
-const HomePage = ({data}) => {
+const HomePage = ({data, contact}) => {
   const order = 1;
   const position="1"
   return (
@@ -31,7 +31,7 @@ const HomePage = ({data}) => {
       <HomeFoodSection order={order} />
       <HomeSingleSlider />
       <Testimonial />
-      <ContactForm/>
+      <ContactForm data={contact}/>
       <ContactMap/>
     </div>
   );
