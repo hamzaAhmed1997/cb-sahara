@@ -17,8 +17,14 @@ const Navbar = ({ data }) => {
 
   const about = [{ title: "Meat", link: "#" }];
   const orderOnline = [
-    { title: "RESTAURANT", link: "#" },
-    { title: "MEAT SHOP", link: "#" },
+    {
+      title: "RESTAURANT",
+      link: "https://marketplace.boons.io/site/sahara-restaurant/38/y",
+    },
+    {
+      title: "MEAT SHOP",
+      link: "https://marketplace.boons.io/site/sahara-meat-market-dublin/76/y",
+    },
     { title: "GROCERIES -Coming Soon", link: "#" },
   ];
 
@@ -50,11 +56,11 @@ const Navbar = ({ data }) => {
               </Link>
             </div>
             <div className="flex items-center">
-              <div className="mx-[5px] hidden lg:flex items-center text-[#6A0000] leading-[1em] text-[16px] font-[600] gap-x-[20px] ">
+              <ul className="mx-[5px] hidden lg:flex items-center text-[#6A0000] leading-[1em] text-[16px] font-[600] gap-x-[20px] ">
                 {data?.navitems?.map((item, index) => (
                   // ${item.link}
                   <Link href={`${item.link}`} legacyBehavior key={index}>
-                    <div
+                    <li
                       onMouseEnter={() => {
                         index === 1 && setIsSubmenu(true),
                           index === 4 && setIsSubmenu1(true);
@@ -66,9 +72,9 @@ const Navbar = ({ data }) => {
                       // ${styles.cusMenu}
                       className={`flex cursor-pointer items-center relative `}
                     >
-                      <div className="flex items-center hover:bg-[#FFC648]">
-                        <div 
-                          className={`hover:text-[#ffffff]    transition px-[20px] py-[12px] hover:cursor-pointer ${
+                      <div className="flex items-center hover:bg-[#FFC648] ">
+                        <div
+                          className={`hover:text-[#ffffff]     transition px-[20px] py-[12px] hover:cursor-pointer ${
                             currentRoute === item.link
                               ? "text-[#ffffff] bg-[#FFC648]"
                               : "text-[#6A0000]"
@@ -99,10 +105,7 @@ const Navbar = ({ data }) => {
                             />
                           </div>
                         </div>
-                      </div>
-
-                      {index === 4 && (
-                        <>
+                        <div className={`${index !== 4 && "hidden"}`}>
                           <span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -117,18 +120,18 @@ const Navbar = ({ data }) => {
                               />
                             </svg>
                           </span>
-                          {isSubMenu1 && (
+                          <div className={`${!isSubMenu1 && "hidden"}`}>
                             <SubMenu
                               setIsSubmenu={setIsSubmenu1}
                               dropdown={orderOnline}
                             />
-                          )}
-                        </>
-                      )}
-                    </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
                   </Link>
                 ))}
-              </div>
+            </ul>
             </div>
             <div className="lg:hidden flex items-center lg:bg-white  h-[32px] w-[40px] justify-center ">
               <Hamburger
