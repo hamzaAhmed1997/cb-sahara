@@ -39,7 +39,7 @@ const HomeFoodSection = ({ order,position }) => {
             className={`py-[30px] px-[10px] w-full flex justify-center  ${
               order == 1 ? "order-1": "order-2" 
             }`}
-            data-aos="lg:fade-left"
+            data-aos="fade-left"
             data-aos-duration="3000"
           >
             <img
