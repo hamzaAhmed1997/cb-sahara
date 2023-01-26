@@ -18,7 +18,7 @@ const data = [
 
 const ServicesCards = ({data}) => {
   return (
-    <div className=" w-full ">
+    <div className=" w-full " id="onlineOrder">
      <div className="py-[80px] max-w-[1300px] mx-auto px-4">
      <div className="mb-[50px]">
         <p className="text-center text-[#FFB400] text-[40px] font-bold leading-[1]  ">
