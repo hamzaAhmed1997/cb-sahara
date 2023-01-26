@@ -5,14 +5,16 @@ import SubMenu from "./subMenu";
 import TopCard from "./TopCard";
 import Hamburger from "../Hamburger";
 
-const data = [
+const Mydata = [
   { title: "Home", link: "/" },
   { title: "About", link: "/about" },
   { title: "Gallery", link: "/gallery" },
   { title: "Contact", link: "/contact" },
   { title: "Order Online", link: "#" },
 ];
-const Navbar = () => {
+const Navbar = ({ data }) => {
+  console.log("data>>>>>>>>>>>>>>>>>Nav________", data);
+
   const about = [{ title: "Meat", link: "#" }];
   const orderOnline = [
     { title: "RESTAURANT", link: "#" },
@@ -34,7 +36,7 @@ const Navbar = () => {
       </div>
       <div className=" shadow-lg bg-[#ffffff]">
         <nav>
-          <div className=" max-w-[1140px] mx-auto flex justify-between  py-[20px]  flex-row items-center px-[12px]">
+          <div className=" max-w-[1140px] mx-auto flex items-center justify-between  pt-[25px]  flex-row items-center px-[12px]">
             <div className="hover:cursor-pointer w-[177px] h-[44px]">
               <Link href={"/"} legacyBehavior>
                 <a href={"/"}>
@@ -51,27 +53,30 @@ const Navbar = () => {
               <div className="mx-[5px] hidden lg:flex items-center text-[#6A0000] leading-[1em] text-[16px] font-[600] gap-x-[20px] ">
                 {data.map((item, index) => (
                   // ${item.link}
-                  <Link href={item.link} legacyBehavior key={index}>
+                  <Link href={`${item.link}`} legacyBehavior key={index}>
                     <div
                       onMouseEnter={() => {
                         index === 1 && setIsSubmenu(true),
                           index === 4 && setIsSubmenu1(true);
                       }}
+                      onMouseLeave={() => {
+                        index === 1 && setIsSubmenu(false),
+                          index === 4 && setIsSubmenu1(false);
+                      }}
                       // ${styles.cusMenu}
                       className={`flex cursor-pointer items-center relative `}
                     >
-                      <a
-                        href={item.link}
-                        className={`hover:text-[#ffffff] hover:bg-[#FFC648] transition px-[20px] py-[12px] hover:cursor-pointer ${
-                          currentRoute === item.link
-                            ? "text-[#ffffff] bg-[#FFC648]"
-                            : "text-[#6A0000]"
-                        }`}
-                      >
-                        {item.title}
-                      </a>
-                      {index === 1 && (
-                        <>
+                      <div className="flex items-center hover:bg-[#FFC648]">
+                        <div 
+                          className={`hover:text-[#ffffff]    transition px-[20px] py-[12px] hover:cursor-pointer ${
+                            currentRoute === item.link
+                              ? "text-[#ffffff] bg-[#FFC648]"
+                              : "text-[#6A0000]"
+                          }`}
+                        >
+                          <a href={item.link}>{item.title}</a>
+                        </div>
+                        <div className={`${index !== 1 && "hidden"}`}>
                           <span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -86,14 +91,16 @@ const Navbar = () => {
                               />
                             </svg>
                           </span>
-                          {isSubMenu && (
+                          <div className={`${!isSubMenu && "hidden"}`}>
                             <SubMenu
                               setIsSubmenu={setIsSubmenu}
                               dropdown={about}
+                              small
                             />
-                          )}
-                        </>
-                      )}
+                          </div>
+                        </div>
+                      </div>
+
                       {index === 4 && (
                         <>
                           <span>
