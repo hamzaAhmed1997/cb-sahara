@@ -1,9 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
+import { imageResolver } from "@/utils/helpers";
 
 const ContactForm = ({ data }) => {
   const [dis, setDis] = useState({
@@ -77,15 +78,30 @@ const ContactForm = ({ data }) => {
             <div className="max-w-[280px] h-[76px]">
               <img
                 className="w-full h-full"
-                src={"images/Logo.png"}
+                src={imageResolver(data?.logoimg).path}
                 alt="form image"
                 loading="lazy"
               />
             </div>
             <div className="mt-[30px] md:mt-[40px] lg:mt-[50px]">
-              <h3 className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[400] mb-[14px]">
-                6783 Dunlin Blvd., Dublin, CA 94568
-              </h3>
+              <Link href={`${data?.contactlink?.addresslink}`} legacyBehavior>
+                <h3 className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[400] mb-[14px]">
+                  <a href={`${data?.contactlink?.addresslink}`}>
+                    {data?.contactlink?.addressname}
+                  </a>
+                </h3>
+              </Link>
+              <p className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[700] mb-[14px]">
+                Tel:
+                <Link href={`${data?.contactlink?.tellink}`} legacyBehavior>
+                  <span className=" font-[400]">
+                    <a href={`${data?.contactlink?.tellink}`}>
+                      {" "}
+                      {data?.contactlink?.telname}
+                    </a>
+                  </span>
+                </Link>
+              </p>
               <p className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[700] mb-[14px]">
                 Tel:
                 <Link href={"tel:(925) 999-8242"} legacyBehavior>
@@ -95,20 +111,24 @@ const ContactForm = ({ data }) => {
                 </Link>
               </p>
               <p className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[700] mb-[14px]">
-                Tel:
-                <span className=" font-[400]"> (925) 999-8242 </span>
-              </p>
-              <p className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[700] mb-[14px]">
                 Email:
-                <Link href={"mailto:mo@saharamkt.com"} legacyBehavior>
-                  <a href={"mailto:mo@saharamkt.com"}>
-                    <span className=" font-[400]"> mo@saharamkt.com </span>
-                  </a>
+                <Link href={`${data?.contactlink?.emaillink}`} legacyBehavior>
+                  <span className=" font-[400]">
+                    <a href={`${data?.contactlink?.emaillink}`}>
+                      {data?.contactlink?.emailname}{" "}
+                    </a>
+                  </span>
                 </Link>
               </p>
               <p className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[700] mb-[14px]">
                 Web:
-                <span className=" font-[400]"> www.saharamkt.com </span>
+                <Link href={`${data?.contactlink?.weblink}`} legacyBehavior>
+                  <span className=" font-[400]">
+                    <a href={`${data?.contactlink?.weblink}`}>
+                      {data?.contactlink?.webname}{" "}
+                    </a>
+                  </span>
+                </Link>
               </p>
             </div>
           </div>
@@ -130,7 +150,7 @@ const ContactForm = ({ data }) => {
                     role="input"
                     arial-label="Please input your name"
                     type="name"
-                    className="outline-[#6a0000] placeholder:text-[#6a0000] text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
+                    className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
                   />
                 </div>
                 <div className="sm:w-[50%] flex flex-col md:ml-6 sm:mt-0 mt-4">
@@ -150,7 +170,7 @@ const ContactForm = ({ data }) => {
                       e.preventDefault()
                     }
                     pattern="[0-9]{1,15}"
-                    className="outline-[#6a0000] placeholder:text-[#6a0000] text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
+                    className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
                   />
                 </div>
               </div>
@@ -170,7 +190,7 @@ const ContactForm = ({ data }) => {
                     role="input"
                     arial-label="Please input your email"
                     type="email"
-                    className="outline-[#6a0000] placeholder:text-[#6a0000] text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
+                    className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
                   />
                 </div>
                 <div className="sm:w-[50%] flex flex-col md:ml-6 sm:mt-0 mt-4">
@@ -183,35 +203,57 @@ const ContactForm = ({ data }) => {
                     placeholder="Company Name"
                     id="company"
                     name="company"
-                    onChange={(e) => setDis({ ...dis, company: e.target.value })}
+                    onChange={(e) =>
+                      setDis({ ...dis, company: e.target.value })
+                    }
                     required
                     role="input"
                     arial-label="Please input your Company Name"
                     type="company"
-                    className="outline-[#6a0000] placeholder:text-[#6a0000] text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
+                    className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
                   />
                 </div>
               </div>
               <div className="mt-4 mb-2">
                 <h3 className="text-[#6a0000]">Inquiries</h3>
                 <div className="flex items-center gap-3 flex-wrap text-[#6a0000]">
-                  <input type="checkbox"  id="Catering" name="Inquiries" value="Catering" />
+                  <input
+                    type="checkbox"
+                    id="Catering"
+                    name="Inquiries"
+                    value="Catering"
+                  />
                   <label htmlFor="vehicle1">Catering</label>
-                  <input type="checkbox"  id="Restaurant" name="Inquiries" value="Restaurant" />
+                  <input
+                    type="checkbox"
+                    id="Restaurant"
+                    name="Inquiries"
+                    value="Restaurant"
+                  />
                   <label htmlFor="vehicle2">Restaurant</label>
                   <input
-                   type="checkbox" 
+                    type="checkbox"
                     id="Meat & Chicken"
                     name="Inquiries"
                     value="Meat & Chicken"
                   />
                   <label htmlFor="vehicle3">Meat & Chicken</label>
-                  <input type="checkbox"  id="Grocery" name="Inquiries" value="Grocery" />
+                  <input
+                    type="checkbox"
+                    id="Grocery"
+                    name="Inquiries"
+                    value="Grocery"
+                  />
                   <label htmlFor="vehicle3">Grocery</label>
-                  <input type="checkbox"  id="Bakery" name="Inquiries" value="Bakery" />
+                  <input
+                    type="checkbox"
+                    id="Bakery"
+                    name="Inquiries"
+                    value="Bakery"
+                  />
                   <label htmlFor="vehicle3">Bakery</label>
                   <input
-                    type="checkbox" 
+                    type="checkbox"
                     id="Fresh Produce"
                     name="Inquiries"
                     value="Fresh Produce"
@@ -238,7 +280,7 @@ const ContactForm = ({ data }) => {
                     aria-label="leave a message"
                     role="textbox"
                     type="name"
-                    className="outline-[#6a0000] placeholder:text-[#6a0000] text-[#6a0000] p-3 mt-2 text-base leading-none border border-[#6a0000] rounded resize-none h-28 focus:oultine-none "
+                    className="outline-[#6a0000]. text-[#6a0000] p-3 mt-2 text-base leading-none border border-[#6a0000] rounded resize-none h-28 focus:oultine-none "
                   />
                 </div>
               </div>
@@ -254,7 +296,7 @@ const ContactForm = ({ data }) => {
                 </button>
               </div>
             </form>
-					<ToastContainer />
+            <ToastContainer />
           </div>
         </div>
       </div>

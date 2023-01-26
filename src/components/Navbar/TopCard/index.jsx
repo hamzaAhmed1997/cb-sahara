@@ -12,33 +12,33 @@ import { Cart } from '../../Common/Icon/Cart';
 
 const TopCard = () => {
   return (
-    <div className="w-full  px-4  bg-[#FFC648]  ">
+    <div className="bg-[#FFC648]  ">
      <div className='flex items-center justify-between max-w-[1140px] mx-auto px-4  '>
      <div className="w-[21%]">
-        <div className="flex gap-x-[2px] space-x-2  py-3 items-start  w-full md:w-auto md:items-center">
+        <div className="flex gap-x-[10px] space-x-2  py-3  w-full md:w-auto items-center">
         <Link href={"#"} legacyBehavior>
-              <a className="hover:text-red-600">
-                <Facebook/>
+              <a className="">
+                <Facebook className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         <Link href={"#"} legacyBehavior>
               <a className="">
-                <Twitter/>
+                <Twitter className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         <Link href={"#"} legacyBehavior>
               <a className="">
-                <Google/>
+                <Google width="18" height="18" className="hover:stroke-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         <Link href={"#"} legacyBehavior>
               <a className="">
-                <Instagram/>
+                <Instagram className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         <Link href={"#"} legacyBehavior>
               <a className="">
-             <Youtube/>
+             <Youtube className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         </div>
