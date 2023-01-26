@@ -104,10 +104,11 @@ const ContactForm = ({ data }) => {
               </p>
               <p className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[700] mb-[14px]">
                 Tel:
-                <span className=" font-[400]">
-                  {" "}
-                  {data?.contactlink?.faxname}{" "}
-                </span>
+                <Link href={"tel:(925) 999-8242"} legacyBehavior>
+                  <a href={"tel:(925) 999-8242"}>
+                    <span className=" font-[400]"> (925) 999-8242 </span>
+                  </a>
+                </Link>
               </p>
               <p className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[700] mb-[14px]">
                 Email:
@@ -149,7 +150,7 @@ const ContactForm = ({ data }) => {
                     role="input"
                     arial-label="Please input your name"
                     type="name"
-                    className="outline-[#6a0000] placeholder:text-[#6a0000] text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
+                    className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
                   />
                 </div>
                 <div className="sm:w-[50%] flex flex-col md:ml-6 sm:mt-0 mt-4">
@@ -169,7 +170,7 @@ const ContactForm = ({ data }) => {
                       e.preventDefault()
                     }
                     pattern="[0-9]{1,15}"
-                    className="outline-[#6a0000] placeholder:text-[#6a0000] text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
+                    className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
                   />
                 </div>
               </div>
@@ -189,7 +190,7 @@ const ContactForm = ({ data }) => {
                     role="input"
                     arial-label="Please input your email"
                     type="email"
-                    className="outline-[#6a0000] placeholder:text-[#6a0000] text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
+                    className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
                   />
                 </div>
                 <div className="sm:w-[50%] flex flex-col md:ml-6 sm:mt-0 mt-4">
@@ -209,7 +210,7 @@ const ContactForm = ({ data }) => {
                     role="input"
                     arial-label="Please input your Company Name"
                     type="company"
-                    className="outline-[#6a0000] placeholder:text-[#6a0000] text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
+                    className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
                   />
                 </div>
               </div>
@@ -279,7 +280,7 @@ const ContactForm = ({ data }) => {
                     aria-label="leave a message"
                     role="textbox"
                     type="name"
-                    className="outline-[#6a0000] placeholder:text-[#6a0000] text-[#6a0000] p-3 mt-2 text-base leading-none border border-[#6a0000] rounded resize-none h-28 focus:oultine-none "
+                    className="outline-[#6a0000]. text-[#6a0000] p-3 mt-2 text-base leading-none border border-[#6a0000] rounded resize-none h-28 focus:oultine-none "
                   />
                 </div>
               </div>

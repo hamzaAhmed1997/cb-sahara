@@ -17,7 +17,7 @@ const HomeFoodSection = ({ order,position }) => {
             }`}
 
           >
-            <h2 className="text-center border-b-[3px] text-[#6A0000] pb-2 border-[#FFB400] text-[36px] font-bold leading-[1.2] mb-[16px] ">
+            <h2 className=" text-center border-b-[3px] text-[#6A0000] pb-2 border-[#FFB400] text-[36px] font-bold leading-[1.2] mb-[16px] ">
               SAHARA MARKET
             </h2>
             <p className="text-[#6A0000] text-[17px] font-400 leading-[2em] md:p-[10px] ">
@@ -39,7 +39,7 @@ const HomeFoodSection = ({ order,position }) => {
             className={`py-[30px] px-[10px] w-full flex justify-center  ${
               order == 1 ? "order-1": "order-2" 
             }`}
-            data-aos="fade-right"
+            data-aos="fade-left"
             data-aos-duration="3000"
           >
             <img

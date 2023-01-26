@@ -1,10 +1,10 @@
 import React from 'react'
 import { imageResolver } from '@/utils/helpers'
 
-const index = ({data}) => {
+const index = ({data}) => { 
   return (
     <>
-      <div className='pt-16 max-w-[1600px] mx-auto'>
+      <div className='pt-[50px]  '>
         <img src={imageResolver(data).path} alt="" />
       </div>
     </>
