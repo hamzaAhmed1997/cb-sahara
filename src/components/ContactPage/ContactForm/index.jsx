@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 
@@ -37,13 +37,13 @@ const ContactForm = ({ data }) => {
   } = useForm();
   const onSubmit = (data) => {
     if (data.name.trim().length === 0) {
-      toast("Please Enter a correct Name");
+      toast.error("Please Enter a correct Name");
       return;
     }
     if (data.phone.length > 20) {
-      toast("Please Enter a correct phone number");
+      toast.error("Please Enter a correct phone number");
     } else if (data.message.length > 800) {
-      toast("write a correct message");
+      toast.error("write a correct message");
     } else {
       fetch("/api/contact", {
         method: "POST",
@@ -57,11 +57,13 @@ const ContactForm = ({ data }) => {
           // console.log("Response received", res);
           if (res.status === 200) {
             // console.log("Response succeeded!");
-            toast("Thank you for contacting us!");
+            toast.success("Thank you for contacting us!");
           } else {
             // console.log("Email/Password is invalid.");
-            toast("Something is wrong.");
+            toast.error("Something is wrong.");
           }
+          setBtnDis(false);
+          document.getElementById("mySubmit").disabled = true;
         })
         .catch((e) => console.log(e));
       reset();
@@ -252,6 +254,7 @@ const ContactForm = ({ data }) => {
                 </button>
               </div>
             </form>
+					<ToastContainer />
           </div>
         </div>
       </div>
