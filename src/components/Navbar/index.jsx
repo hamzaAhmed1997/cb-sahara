@@ -34,8 +34,8 @@ const Navbar = ({ data }) => {
       </div>
       <div className=" shadow-lg bg-[#ffffff]">
         <nav>
-          <div className=" max-w-[1140px] mx-auto flex items-center justify-between  pt-[25px]  flex-row items-center px-[12px]">
-            <div className="hover:cursor-pointer w-[177px] h-[44px]">
+          <div className=" max-w-[1140px] mx-auto flex  justify-between  pt-[25px]  flex-row items-center px-[12px]">
+            <div className="hover:cursor-pointer w-[135px] sm:w-[155px] md:w-[165px] lg:w-[177px] h-[36px] sm:h-[40px] md:h-[44px]">
               <Link href={"/"} legacyBehavior>
                 <a href={"/"}>
                   <img
