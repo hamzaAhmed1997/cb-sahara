@@ -11,19 +11,18 @@ import FlipCards from "./FlipCards";
 import ContactForm from "../ContactPage/ContactForm";
 import ContactMap from "./ContactMap";
 
-const HomePage = ({data}) => {
-  console.log("services cards data",data);
+const HomePage = ({data, contact}) => {
   const order = 1;
   const position="1"
   return (
     <div>
-      <HomeHero />
+      <HomeHero data={data?.ourDishes}/>
       <ServicesCards data={data?.onlineOrder} />
-      <FlipImages/>
-      <SaharaMarket />
-      <FlipCards/>
-      <ImageSlider />
-      <HomeFoodSection order={order} position={position} />
+      <FlipImages data={data?.flipImage}/>
+      <SaharaMarket data={data?.welcome}/>
+      <FlipCards data={data?.ourfacilities}/>
+      <ImageSlider data={data?.imageslider} />
+      <HomeFoodSection  order={order} position={position} />
       <HomeSingleSlider />
       <SaharaMarket order={order}/>
       <HomeFoodSection />
@@ -31,8 +30,8 @@ const HomePage = ({data}) => {
       <HomeFoodSection />
       <HomeFoodSection order={order} />
       <HomeSingleSlider />
-      <Testimonial />
-      <ContactForm/>
+      <Testimonial data={data?.testimonials}/>
+      <ContactForm data={contact}/>
       <ContactMap/>
     </div>
   );

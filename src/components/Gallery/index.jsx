@@ -149,6 +149,7 @@ const images1 = [
                   data?.galleryimg[0]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.galleryimg[0]?.image).path}
                 />
@@ -156,11 +157,13 @@ const images1 = [
                 }
               </div>
               
+              
               <div className="w-1/2 p-1 md:p-2">
               {
                   data?.galleryimg[1]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.galleryimg[1]?.image).path}
                 />
@@ -172,6 +175,7 @@ const images1 = [
                   data?.galleryimg[2]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.galleryimg[2]?.image).path}
                 />
@@ -185,6 +189,7 @@ const images1 = [
                   data?.galleryimg[3]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.galleryimg[3]?.image).path}
                 />
@@ -196,6 +201,7 @@ const images1 = [
                   data?.galleryimg[4]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.galleryimg[4]?.image).path}
                 />
@@ -207,6 +213,7 @@ const images1 = [
                   data?.galleryimg[5]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.galleryimg[5]?.image).path}
                 />
@@ -220,6 +227,7 @@ const images1 = [
                   data?.galleryimg[6]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.galleryimg[6]?.image).path}
                 />
@@ -231,6 +239,7 @@ const images1 = [
                   data?.galleryimg[7]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.galleryimg[7]?.image).path}
                 />
@@ -242,6 +251,7 @@ const images1 = [
                   data?.galleryimg[8]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.galleryimg[8]?.image).path}
                 />
@@ -255,6 +265,7 @@ const images1 = [
                   data?.galleryimg[9]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.galleryimg[9]?.image).path}
                 />
@@ -267,6 +278,7 @@ const images1 = [
                   data?.galleryimg[10]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.galleryimg[10]?.image).path}
                 />
@@ -278,6 +290,7 @@ const images1 = [
                   data?.galleryimg[11]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.galleryimg[11]?.image).path}
                 />
@@ -320,6 +333,7 @@ const images1 = [
                   data?.multipleimage[0]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.multipleimage[0]?.image).path}
                 />
@@ -332,17 +346,20 @@ const images1 = [
                   data?.multipleimage[1]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.multipleimage[1]?.image).path}
                 />
                    )
                 }
               </div>
+              
               <div className="w-full p-1 md:p-2">
               {
                   data?.multipleimage[2]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.multipleimage[2]?.image).path}
                 />
@@ -356,6 +373,7 @@ const images1 = [
                   data?.multipleimage[3]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.multipleimage[3]?.image).path}
                 />
@@ -367,6 +385,7 @@ const images1 = [
                   data?.multipleimage[4]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.multipleimage[4]?.image).path}
                 />
@@ -378,6 +397,7 @@ const images1 = [
                   data?.multipleimage[5]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.multipleimage[5]?.image).path}
                 />
@@ -391,6 +411,7 @@ const images1 = [
                   data?.multipleimage[6]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.multipleimage[6]?.image).path}
                 />
@@ -402,6 +423,7 @@ const images1 = [
                   data?.multipleimage[7]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.multipleimage[7]?.image).path}
                 />
@@ -413,6 +435,7 @@ const images1 = [
                   data?.multipleimage[8]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.multipleimage[8]?.image).path}
                 />
@@ -426,6 +449,7 @@ const images1 = [
                   data?.multipleimage[9]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.multipleimage[9]?.image).path}
                 />
@@ -437,6 +461,7 @@ const images1 = [
                   data?.multipleimage[10]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.multipleimage[10]?.image).path}
                 />
@@ -448,6 +473,7 @@ const images1 = [
                   data?.multipleimage[11]?.image?.data !==null && (
                     <img
                   alt="gallery"
+                  loading="lazy"
                   className="block object-cover object-center w-full h-full rounded-lg"
                   src={imageResolver(data?.multipleimage[11]?.image).path}
                 />

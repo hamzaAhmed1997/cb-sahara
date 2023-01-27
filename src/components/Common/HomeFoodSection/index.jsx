@@ -2,13 +2,14 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const HomeFoodSection = ({ order,position }) => {
+const HomeFoodSection = ({ order,position}) => {
  
   useEffect(() => {
     AOS.init();
   }, []);
   return (
     <div className="w-full my-[100px]">
+      
       <div className=" max-w-[1140px] w-full mx-auto px-4">
         <div className="grid md:grid-cols-3">
           <div
@@ -17,7 +18,7 @@ const HomeFoodSection = ({ order,position }) => {
             }`}
 
           >
-            <h2 className="text-center border-b-[3px] text-[#6A0000] pb-2 border-[#FFB400] text-[36px] font-bold leading-[1.2] mb-[16px] ">
+            <h2 className=" text-center border-b-[3px] text-[#6A0000] pb-2 border-[#FFB400] text-[36px] font-bold leading-[1.2] mb-[16px] ">
               SAHARA MARKET
             </h2>
             <p className="text-[#6A0000] text-[17px] font-400 leading-[2em] md:p-[10px] ">
@@ -39,7 +40,7 @@ const HomeFoodSection = ({ order,position }) => {
             className={`py-[30px] px-[10px] w-full flex justify-center  ${
               order == 1 ? "order-1": "order-2" 
             }`}
-            data-aos="fade-right"
+            data-aos="fade-left"
             data-aos-duration="3000"
           >
             <img

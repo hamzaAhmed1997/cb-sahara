@@ -3,12 +3,12 @@ import HomePage from "@/src/components/HomePage";
 import Layout from "@/src/components/Layout";
 import { adminPath } from "@/utils/constants";
 
-export default function Home({pageData}) {
+export default function Home({pageData ,siteData}) {
   console.log("home page data", pageData);
   return (
     <>
-      <Layout>
-        <HomePage data={pageData}/>
+      <Layout data={siteData}>
+        <HomePage contact={siteData?.contact} data={pageData}/>
       </Layout>
     </>
   );
