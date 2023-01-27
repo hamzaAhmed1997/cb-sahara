@@ -41,21 +41,80 @@ export default function Footer() {
             and catering in the largest Halal market in Northern California.
           </p>
           <div className="flex gap-x-[15px] items-center justify-center sm:justify-start mt-[20px]">
-          
-           <Link href={""} legacyBehavior><a href=""> <span><Facebook className="hover:fill-[#FFB400] transition-all duration-300" width={22} height={22}/> </span></a></Link>
-           <Link href={""} legacyBehavior><a href=""> <span><Twitter className="hover:fill-[#FFB400] transition-all duration-300" /> </span></a></Link>
-           <Link href={""} legacyBehavior><a href=""> <span><Google className="hover:stroke-[#FFB400] transition-all duration-300" width={18} height={18}/> </span></a></Link>
-           <Link href={""} legacyBehavior><a href=""> <span><Instagram className="hover:fill-[#FFB400] transition-all duration-300" /> </span></a></Link>
-           <Link href={""} legacyBehavior><a href=""> <span><Youtube className="hover:fill-[#FFB400] transition-all duration-300" /> </span></a></Link>
-           <Link href={""} legacyBehavior><a href=""> <span><Linkedin className="hover:fill-[#FFB400] transition-all duration-300" width={18} height={16}/> </span></a></Link>
+            <Link href={""} legacyBehavior>
+              <a href="">
+                {" "}
+                <span>
+                  <Facebook
+                    className="hover:fill-[#FFB400] transition-all duration-300"
+                    width={22}
+                    height={22}
+                  />{" "}
+                </span>
+              </a>
+            </Link>
+            <Link href={""} legacyBehavior>
+              <a href="">
+                {" "}
+                <span>
+                  <Twitter className="hover:fill-[#FFB400] transition-all duration-300" />{" "}
+                </span>
+              </a>
+            </Link>
+            <Link href={""} legacyBehavior>
+              <a href="">
+                {" "}
+                <span>
+                  <Google
+                    className="hover:stroke-[#FFB400] transition-all duration-300"
+                    width={18}
+                    height={18}
+                  />{" "}
+                </span>
+              </a>
+            </Link>
+            <Link href={""} legacyBehavior>
+              <a href="">
+                {" "}
+                <span>
+                  <Instagram className="hover:fill-[#FFB400] transition-all duration-300" />{" "}
+                </span>
+              </a>
+            </Link>
+            <Link href={""} legacyBehavior>
+              <a href="">
+                {" "}
+                <span>
+                  <Youtube className="hover:fill-[#FFB400] transition-all duration-300" />{" "}
+                </span>
+              </a>
+            </Link>
+            <Link href={""} legacyBehavior>
+              <a href="">
+                {" "}
+                <span>
+                  <Linkedin
+                    className="hover:fill-[#FFB400] transition-all duration-300"
+                    width={18}
+                    height={16}
+                  />{" "}
+                </span>
+              </a>
+            </Link>
           </div>
-          <div  className="bg-[#FFC648] text-white mt-4 px-4 py-1 inline-flex  rounded-[3px]">
-            <button>Order Online</button>
-          </div>
+          <Link href={"#onlineOrder"} legacyBehavior>
+            <div className="hover:cursor-pointer border-[2px] border-[#FFC648] text-[#FFC648] hover:text-[#6A0000] font-[700] hover:bg-[#FFC648] transition-all duration-300 mt-4 px-4 py-1 inline-flex  rounded-[3px]">
+              <button>
+                <a href="#onlineOrder">Order Online</a>
+              </button>
+            </div>
+          </Link>
         </div>
         <div className="md:w-[50%] sm:flex mt-[50px] md:mt-0">
           <div className="px-4 sm:w-1/2">
-            <h2 className="text-[20px] leading-[30px] text-white font-bold">QUICK LINKS</h2>
+            <h2 className="text-[20px] leading-[30px] text-white font-bold">
+              QUICK LINKS
+            </h2>
             <div className="mt-[20px]">
               {mydata.map((item, index) => (
                 <Link href={item.link} legacyBehavior key={index}>
@@ -80,25 +139,26 @@ export default function Footer() {
                 </Link>
               ))}
             </div>
-            
           </div>
           <div className="sm:w-1/2">
-            <h2 className="text-[20px] leading-[30px] text-white font-bold">OPEN HOURS</h2>
+            <h2 className="text-[20px] leading-[30px] text-white font-bold">
+              OPEN HOURS
+            </h2>
             <div className="mt-[20px]">
-             {data.map((item, index) => {
-              return (
-                <div key={index}>
-                  <p className="text-[15px] leading-[35px] text-white  ">
-                    {item.day}
-                  </p>
-                </div>
-              );
-            })}
+              {data.map((item, index) => {
+                return (
+                  <div key={index}>
+                    <p className="text-[15px] leading-[35px] text-white  ">
+                      {item.day}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </div>
-      <div className="max-w-[1140px] px-4 mx-auto h-[1px] bg-white mt-[30px] "/>
+      <div className="max-w-[1140px] px-4 mx-auto h-[1px] bg-white mt-[30px] " />
       <div className="">
         <p className="text-center text-[14px] font-[400] text-white py-[20px] px-4">
           © 2022
