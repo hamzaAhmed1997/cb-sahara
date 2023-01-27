@@ -73,8 +73,7 @@ const images1 = [
   { title1: "11", caption: "Image 11", url: (imageResolver(data?.multipleimage[10]?.image).path),  },
   { title1: "12", caption: "Image 12", url: (imageResolver(data?.multipleimage[11]?.image).path),  },
 
-];
-  console.log("multiple images", data)
+]; 
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenm, setIsOpenm] = useState(false);
 

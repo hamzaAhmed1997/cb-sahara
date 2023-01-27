@@ -66,8 +66,7 @@ function SamplePrevArrow(props) {
     </section>
   );
 }
-const Testimonial = ({ data }) => {
-  console.log("HOme TEstimonial are here>>>", data);
+const Testimonial = ({ data }) => { 
   const settings = {
     dots: false,
     infinite: true,
