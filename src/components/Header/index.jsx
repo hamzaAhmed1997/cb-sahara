@@ -29,7 +29,7 @@ export default function Header({ data }) {
 
         <link
           rel="canonical"
-          href={`https:// .com${router.asPath}`}
+          href={`https://saharamkt.com${router.asPath}`}
         />
         <meta
           property="og:title"
@@ -41,11 +41,11 @@ export default function Header({ data }) {
         />
         <meta
           property="og:image"
-          content={`https://admin .vigorant.xyz${data?.ogUrl}`}
+          content={`https://adminsaharamkt.vigorant.xyz${data?.ogUrl}`}
         />
         <meta
           property="og:url"
-          content={`https:// .com${router.asPath}`}
+          content={`https://saharamkt.com${router.asPath}`}
         />
         <meta
           name="twitter:title"
