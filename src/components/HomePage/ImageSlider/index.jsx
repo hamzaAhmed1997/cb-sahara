@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { imageResolver } from '@/utils/helpers';
 
 const data=[
     {
@@ -24,7 +25,7 @@ const data=[
     },
 ]
 
-const ImageSlider = () => {
+const ImageSlider = ( {data}) => {
     const settings = {
         dots: false,
         infinite: true,
@@ -57,10 +58,10 @@ const ImageSlider = () => {
     <div className="w-full py-[60px] bg-[#FFB400]">
       <div className='max-w-[1090px] mx-auto cursor-grabbing '>
       <Slider {...settings} >
-        {data.map((item, index) => {
+        {data?.map((item, index) => {
           return (
            <div key={index} className="px-3 ">
-            <img  src={item.image} className="" loading='lazy' alt='Image slider'></img>
+            <img  src={imageResolver(item?.image).path} className="" loading='lazy' alt='Image slider'></img>
            </div>
           );
         })}

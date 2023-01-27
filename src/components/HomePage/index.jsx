@@ -20,9 +20,9 @@ const HomePage = ({data, contact}) => {
       <ServicesCards data={data?.onlineOrder} />
       <FlipImages data={data?.flipImage}/>
       <SaharaMarket data={data?.welcome}/>
-      <FlipCards/>
-      <ImageSlider />
-      <HomeFoodSection order={order} position={position} />
+      <FlipCards data={data?.ourfacilities}/>
+      <ImageSlider data={data?.imageslider} />
+      <HomeFoodSection  order={order} position={position} />
       <HomeSingleSlider />
       <SaharaMarket order={order}/>
       <HomeFoodSection />
@@ -30,7 +30,7 @@ const HomePage = ({data, contact}) => {
       <HomeFoodSection />
       <HomeFoodSection order={order} />
       <HomeSingleSlider />
-      <Testimonial />
+      <Testimonial data={data?.testimonials}/>
       <ContactForm data={contact}/>
       <ContactMap/>
     </div>

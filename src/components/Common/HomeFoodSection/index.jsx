@@ -2,13 +2,14 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const HomeFoodSection = ({ order,position }) => {
+const HomeFoodSection = ({ order,position}) => {
  
   useEffect(() => {
     AOS.init();
   }, []);
   return (
     <div className="w-full my-[100px]">
+      
       <div className=" max-w-[1140px] w-full mx-auto px-4">
         <div className="grid md:grid-cols-3">
           <div
