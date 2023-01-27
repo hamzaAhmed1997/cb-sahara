@@ -85,15 +85,15 @@ const ContactForm = ({ data }) => {
             </div>
             <div className="mt-[30px] md:mt-[40px] lg:mt-[50px]">
               <Link href={`${data?.contactlink?.addresslink}`} legacyBehavior>
-                <h3 className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[400] mb-[14px]">
-                  <a
-                    href={`${data?.contactlink?.addresslink}`}
-                    target="_blank"
-                    rel="noopener"
-                  >
+                <a
+                  href={`${data?.contactlink?.addresslink}`}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <h3 className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[400] mb-[14px]">
                     {data?.contactlink?.addressname}
-                  </a>
-                </h3>
+                  </h3>
+                </a>
               </Link>
               <p className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[700] mb-[14px]">
                 Tel:
