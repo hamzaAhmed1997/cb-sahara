@@ -4,7 +4,7 @@ export default function Twitter(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-brand-twitter"
+      className="icon icon-tabler icon-tabler-brand-twitter"
       width="20"
       height="20"
       viewBox="0 0 24 24"

@@ -4,14 +4,14 @@ export default function Google(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-brand-google"
+      className="icon icon-tabler icon-tabler-brand-google"
       width="20"
       height="20"
       viewBox="0 0 24 24"
       strokeWidth="3.5"
       stroke="#ffffff"
       fill="none"
-      stroke-linecap="round"
+      strokeLinecap="round"
       strokeLinejoin="round"
       {...props}
     >
