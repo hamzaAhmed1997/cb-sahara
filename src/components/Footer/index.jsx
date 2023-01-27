@@ -49,6 +49,9 @@ export default function Footer() {
            <Link href={""} legacyBehavior><a href=""> <span><Youtube className="hover:fill-[#FFB400] transition-all duration-300" /> </span></a></Link>
            <Link href={""} legacyBehavior><a href=""> <span><Linkedin className="hover:fill-[#FFB400] transition-all duration-300" width={18} height={16}/> </span></a></Link>
           </div>
+          <div  className="bg-[#FFC648] text-white mt-4 px-4 py-1 inline-flex  rounded-[3px]">
+            <button>Order Online</button>
+          </div>
         </div>
         <div className="md:w-[50%] sm:flex mt-[50px] md:mt-0">
           <div className="px-4 sm:w-1/2">
@@ -77,6 +80,7 @@ export default function Footer() {
                 </Link>
               ))}
             </div>
+            
           </div>
           <div className="sm:w-1/2">
             <h2 className="text-[20px] leading-[30px] text-white font-bold">OPEN HOURS</h2>
