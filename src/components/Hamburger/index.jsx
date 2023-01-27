@@ -75,7 +75,7 @@ const Hamburger = ({
                       className={`inline-flex  cursor-pointer ${styles.cusMenu} flex-col`}
                     >
                       <p
-                        className={`text-[11px]  leading-[11px] font-[700] text-[#9A0000] transition-all ease duration-500 inline-flex items-center gap-[6px] ${styles.hoverText}`}
+                        className={`text-[14px]  leading-[11px] font-[700] text-[#9A0000] transition-all ease duration-500 inline-flex items-center gap-[6px] ${styles.hoverText}`}
                       >
                         <Link href={`${item.link}`} legacyBehavior>
                           <a href={`${item.link}`}>{item.title}</a>
