@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Slider from "react-slick";
+import { imageResolver } from "@/utils/helpers";
 const myData = [
   {
     img: "images/HomeHero.jpg",
@@ -22,7 +23,7 @@ const myData = [
   },
 ];
 
-export default function HomeHero() {
+export default function HomeHero({data}) {
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -48,13 +49,13 @@ export default function HomeHero() {
   return (
     <div className="cursor-grab">
       <Slider {...settings}>
-        {myData.map((item, index) => {
+        {data?.map((item, index) => {
           return (
             <div key={index}>
               <div
                 className="text-center "
                 style={{
-                  background: `url(${item.img}) no-repeat center center/cover`,
+                  background: `url(${imageResolver(item?.dishimg)?.path}) no-repeat center center/cover`,
                 }}
               >
                 <div className="bg-gradient-to-r from-[#353232b0] py-[300px]">
@@ -64,15 +65,15 @@ export default function HomeHero() {
                     className="max-w-[950px] mx-auto px-4 "
                   >
                     <h2 className="text-[20px] text-[#ffffff] font-normal uppercase underline mb-[30px] ">
-                      {item.headline}
+                      {item.dishTitle}
                     </h2>
                     <p className="mb-[30px] text-[30px] leading-[42px]  font-[600] text-[#ffb400] ">
-                      {item.pragraph}
+                      {item.dishDescription}
                     </p>
                     <Link href={``} legacyBehavior>
                       <a href={``}>
                         <button className="text-[18px] leading-[18px] font-[400] text-[#ffb400] hover:text-white py-3 px-6 border-[2px] transition border-[#ffb400] rounded hover:bg-[#ffb400] ">
-                          Order Online
+                          {item.dishButton.name}
                         </button>
                       </a>
                     </Link>
