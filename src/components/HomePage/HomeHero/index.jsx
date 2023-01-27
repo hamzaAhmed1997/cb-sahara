@@ -58,7 +58,7 @@ export default function HomeHero({data}) {
                   background: `url(${imageResolver(item?.dishimg)?.path}) no-repeat center center/cover`,
                 }}
               >
-                <div className="bg-gradient-to-r from-[#353232b0] py-[300px]">
+                <div className="bg-gradient bg-[#241818b0] bg-opacity-50 py-[300px]">
                   <div
                     data-aos="fade-up"
                     data-aos-duration="3000"

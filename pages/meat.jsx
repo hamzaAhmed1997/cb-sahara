@@ -1,14 +1,16 @@
-
-import HomePage from "@/src/components/HomePage";
 import Layout from "@/src/components/Layout";
 import { adminPath } from "@/utils/constants";
 
 export default function Home({pageData ,siteData}) {
-  console.log("home page data", pageData);
   return (
     <>
       <Layout data={siteData} seoData={pageData?.seo}>
-        <HomePage contact={siteData?.contact} data={pageData}/>
+        <div className="mt-40 mb-7 max-w-[1140px] px-4 mx-auto">
+        <div className="lg:pl-14">
+        <h2 className="text-[#333333] text-[40px] leading-[48px] font-medium">The page can't be found.</h2>
+        <p className="text-[#333333] text-[16px] leading-[24px] ">It looks like nothing was found at this location.</p>
+        </div>
+        </div>
       </Layout>
     </>
   );
@@ -19,7 +21,7 @@ export async function getStaticProps() {
   let pageData = null;
   let siteData = null;
   try {
-    pageData = await (await fetch(`${adminPath}/home?populate=deep`)).json();
+    pageData = await (await fetch(`${adminPath}/meat?populate=deep`)).json();
     siteData = await (await fetch(`${adminPath}/site?populate=deep`)).json();
   } catch (err) {}
   return {

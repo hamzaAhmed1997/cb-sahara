@@ -3,10 +3,10 @@ import Footer from '../Footer'
 import Header from '../Header'
 import Navbar from '../Navbar'
 
-export default function Layout({children, data}) {
+export default function Layout({children, data,seoData}) {
   return (
     <div>
-      <Header/>
+      <Header data={seoData}/>
         <Navbar data={data?.navbar}/>
         <div>{children}</div>
         <Footer/>

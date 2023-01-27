@@ -5,16 +5,10 @@ import SubMenu from "./subMenu";
 import TopCard from "./TopCard";
 import Hamburger from "../Hamburger";
 
-const Mydata = [
-  { title: "Home", link: "/" },
-  { title: "About", link: "/about" },
-  { title: "Gallery", link: "/gallery" },
-  { title: "Contact", link: "/contact" },
-  { title: "Order Online", link: "#" },
-];
+
 const Navbar = ({ data }) => {
 
-  const about = [{ title: "Meat", link: "#" }];
+  const about = [{ title: "Meat", link: "/meat" }];
   const orderOnline = [
     {
       title: "RESTAURANT",
