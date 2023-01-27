@@ -86,16 +86,23 @@ const ContactForm = ({ data }) => {
             <div className="mt-[30px] md:mt-[40px] lg:mt-[50px]">
               <Link href={`${data?.contactlink?.addresslink}`} legacyBehavior>
                 <h3 className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[400] mb-[14px]">
-                  <a href={`${data?.contactlink?.addresslink}`}>
+                  <a
+                    href={`${data?.contactlink?.addresslink}`}
+                    target="_blank"
+                    rel="noopener"
+                  >
                     {data?.contactlink?.addressname}
                   </a>
                 </h3>
               </Link>
               <p className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[700] mb-[14px]">
                 Tel:
-                <Link href={`${data?.contactlink?.tellink}`} legacyBehavior>
+                <Link
+                  href={`tel:+${data?.contactlink?.tellink}`}
+                  legacyBehavior
+                >
                   <span className=" font-[400]">
-                    <a href={`${data?.contactlink?.tellink}`}>
+                    <a href={`tel:+${data?.contactlink?.tellink}`}>
                       {" "}
                       {data?.contactlink?.telname}
                     </a>
@@ -103,18 +110,17 @@ const ContactForm = ({ data }) => {
                 </Link>
               </p>
               <p className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[700] mb-[14px]">
-                Tel:
-                <Link href={"tel:(925) 999-8242"} legacyBehavior>
-                  <a href={"tel:(925) 999-8242"}>
-                    <span className=" font-[400]"> (925) 999-8242 </span>
-                  </a>
-                </Link>
+                Fax:
+                <span className=" font-[400]"> (925) 999-8242 </span>
               </p>
               <p className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[700] mb-[14px]">
                 Email:
-                <Link href={`${data?.contactlink?.emaillink}`} legacyBehavior>
+                <Link
+                  href={`mailto:+${data?.contactlink?.emaillink}`}
+                  legacyBehavior
+                >
                   <span className=" font-[400]">
-                    <a href={`${data?.contactlink?.emaillink}`}>
+                    <a href={`mailto:+${data?.contactlink?.emaillink}`}>
                       {data?.contactlink?.emailname}{" "}
                     </a>
                   </span>
