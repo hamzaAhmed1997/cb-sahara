@@ -1,25 +1,44 @@
-import ContactPage from '@/src/components/ContactPage'
-import Layout from '@/src/components/Layout'
-import React from 'react'
-import { adminPath } from '@/utils/constants'
+import ContactPage from "@/src/components/ContactPage";
+import Layout from "@/src/components/Layout";
+import React from "react";
+import { adminPath } from "@/utils/constants";
+import { jwtToken } from "@/utils/constants";
 
-export default function contact({pageData, siteData}) {
+export default function contact({ pageData, siteData }) {
   return (
     <div>
-      <Layout data={siteData}  seoData={pageData?.seo}>
-        <ContactPage contact={siteData?.contact} data={pageData}/>
+      <Layout data={siteData} seoData={pageData?.seo}>
+        <ContactPage contact={siteData?.contact} data={pageData} />
       </Layout>
     </div>
-  )
+  );
 }
 export async function getStaticProps() {
   let pageData = null;
   let siteData = null;
+  let bearer = "Bearer " + jwtToken;
 
   try {
-
-    pageData = await (await fetch(`${adminPath}/contact?populate=deep`)).json();
-    siteData = await (await fetch(`${adminPath}/site?populate=deep`)).json();
+    pageData = await (
+      await fetch(`${adminPath}/contact?populate=deep`, {
+        method: "GET",
+        withCredentials: true,
+        credentials: "include",
+        headers: {
+          Authorization: bearer,
+        },
+      })
+    ).json();
+    siteData = await (
+      await fetch(`${adminPath}/site?populate=deep`, {
+        method: "GET",
+        withCredentials: true,
+        credentials: "include",
+        headers: {
+          Authorization: bearer,
+        },
+      })
+    ).json();
   } catch (err) {}
   return {
     props: {
