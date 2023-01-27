@@ -97,12 +97,12 @@ const Testimonial = ({ data }) => {
     ],
   };
   return (
-    <div className="py-[80px] bg-[#6A0000] my-[60px]">
+    <div className="py-[40px] md:py-[60px] lg:py-[80px] bg-[#6A0000] my-[40px] md:my-[50px] lg:my-[60px]">
       <div className="p-[15px] max-w-[1140px] mx-auto">
-        <div className=" w-full px-4">
+        <div className="">
           <div className="  p-[10px] ">
-            <div className=" ">
-              <h2 className="text-center border-b-[3px] border-[#FFB400] pb-4 mb-[20px] text-[#FFB400] text-[30px] sm:text-[36px] font-bold leading-[1.2] ">
+            <div className="">
+              <h2 className="text-center border-b-[3px] border-[#FFB400] pb-4 mb-[20px] text-[#FFB400] text-[28px] sm:text-[30px] md:text-[36px] font-bold leading-[1.2] ">
                 {data?.testimonialheading}
               </h2>
             </div>
@@ -115,7 +115,7 @@ const Testimonial = ({ data }) => {
                       className="max-w-[1036px] p-[20px] transition "
                     >
                       <div
-                        className="text-[#ffffff] italic text-[1.3em] font-[400] leading-[1.5] cus-home-testimonial"
+                        className="text-[#ffffff] italic  md:text-[19px] lg:text-[21px] font-[400] leading-[31px] cus-home-testimonial"
                         dangerouslySetInnerHTML={{ __html: item?.body }}
                       ></div>
                       <div className="flex gap-x-3 justify-center mt-[25px]">
