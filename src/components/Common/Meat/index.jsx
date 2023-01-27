@@ -35,7 +35,8 @@ const Meat = ({ order, data}) => {
           >
             <img
               src={imageResolver(data?.image).path}
-              alt=""
+              alt="meat image"
+              loading="lazy"
               className="shadow "
             />
           </div>

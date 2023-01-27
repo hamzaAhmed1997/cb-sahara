@@ -7,23 +7,10 @@ import Google from "../Common/Icon/Google";
 import { Youtube } from "../Common/Icon/Youtube";
 import Linkedin from "../Common/Icon/Linkedin";
 import { Instagram } from "../Common/Icon/Instagram";
+import { imageResolver } from "@/utils/helpers";
 
-const mydata = [
-  { title: "Home", link: "/" },
-  { title: "Store", link: "/store" },
-  { title: "Gallery", link: "/gallery" },
-  { title: "Contact", link: "/contact" },
-];
-const data = [
-  { day: " Mon: 10AM – 6:00 PM" },
-  { day: "Tue: 10AM – 6:00 PM" },
-  { day: "Wed: 10AM – 6:00 PM" },
-  { day: "Tue: 10AM – 6:00 PM" },
-  { day: " Fri: 10AM – 6:00 PM" },
-  { day: "Sat: 10AM – 6:00 PM" },
-  { day: "Sun: 10AM – 6:00 PM" },
-];
-export default function Footer() {
+export default function Footer({data}) {
+   
   const router = useRouter();
   const currentRoute = router.pathname.slice(0);
   const [isSubMenu, setIsSubmenu] = useState(false);
@@ -33,12 +20,10 @@ export default function Footer() {
       <div className="max-w-[1140px] mx-auto px-4 md:flex pt-[60px] justify-between text-center sm:text-start">
         <div className="md:w-[40%]">
           <div className="max-w-[300px] h-[80px] mb-[15px]">
-            <img className="w-full h-full" src="images/footerlogo.png" />
+            <img className="w-full h-full" src={imageResolver(data?.logo).path}  />
           </div>
           <p className="text-[16px] leading-[24px] text-white font-normal">
-            The best Persian and Afghani style one-stop shop market. We offer
-            grocery, bakery, fresh produce, Halal meat and chicken, restaurant,
-            and catering in the largest Halal market in Northern California.
+            {data?.marketdetails}
           </p>
           <div className="flex gap-x-[15px] items-center justify-center sm:justify-start mt-[20px]">
             <Link href={""} legacyBehavior>
@@ -116,8 +101,8 @@ export default function Footer() {
               QUICK LINKS
             </h2>
             <div className="mt-[20px]">
-              {mydata.map((item, index) => (
-                <Link href={item.link} legacyBehavior key={index}>
+              {data?.footernav?.map((item, index) => (
+                <Link href={item?.link} legacyBehavior key={index}>
                   <p
                     onMouseEnter={() => {
                       index === 1 && setIsSubmenu(true),
@@ -126,7 +111,7 @@ export default function Footer() {
                     className=""
                   >
                     <a
-                      href={item.link}
+                      href={item?.link} 
                       className={` text-[16px] leading-[35px] text-[#ffffff]  hover:text-[#FFC648] transition font-semibold tracking-[1px] ${
                         currentRoute === item.link
                           ? "text-[#FFC648] border-b-[2px] border-[#FFC648]"
@@ -145,11 +130,12 @@ export default function Footer() {
               OPEN HOURS
             </h2>
             <div className="mt-[20px]">
-              {data.map((item, index) => {
+              {data?.opentime?.map((item, index) => {
                 return (
                   <div key={index}>
                     <p className="text-[15px] leading-[35px] text-white  ">
-                      {item.day}
+                      {item.days}
+                      {item.timing}
                     </p>
                   </div>
                 );
@@ -160,25 +146,25 @@ export default function Footer() {
       </div>
       <div className="max-w-[1140px] px-4 mx-auto h-[1px] bg-white mt-[30px] " />
       <div className="">
-        <p className="text-center text-[14px] font-[400] text-white py-[20px] px-4">
-          © 2022
+        <div className="text-center text-[14px] font-[400] text-white py-[20px] px-4">
+          {data?.links?.date}
           <span className="hover:text-[#FFC648] transition-all duration-300 font-[500]">
-            <Link href={"/"} legacyBehavior>
-              <a href={"/"}> SAHARA MARKET </a>
+            <Link href={`${data?.links?.companylink}`} legacyBehavior>
+              <a href={`${data?.links?.companylink}`}> {data?.links?.companytext} </a>
             </Link>{" "}
           </span>
-          | All rights reserved. | Powered by:
+          {data?.links?.publisherheading}
           <span className="hover:text-[#FFC648] transition-all duration-300 font-[500]">
             <Link
-              href={"https://vigorant.com/"}
+              href={`${data?.links?.publisherlink}`}
               legacyBehavior
               target={"_blank"}
               rel="noopener"
             >
-              <a href={"https://vigorant.com/"}> Vigorant, Inc.</a>
+              <a href={`${data?.links?.publisherlink}`}> {data?.links?.publishertext}</a>
             </Link>
           </span>
-        </p>
+        </div>
       </div>
     </div>
   );
