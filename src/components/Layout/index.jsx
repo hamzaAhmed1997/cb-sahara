@@ -9,7 +9,7 @@ export default function Layout({children, data,seoData}) {
       <Header data={seoData}/>
         <Navbar data={data?.navbar}/>
         <div>{children}</div>
-        <Footer/>
+        <Footer data={data?.footer}/>
     </div>
   )
 }
