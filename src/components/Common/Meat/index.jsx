@@ -5,9 +5,7 @@ import { imageResolver } from "@/utils/helpers";
 
 
 const Meat = ({ order, data}) => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  
   return (
     <div className="w-full py-[80px] bg-[#6A0000] my-[60px] ">
       

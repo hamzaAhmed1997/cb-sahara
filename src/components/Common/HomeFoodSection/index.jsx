@@ -5,9 +5,7 @@ import { imageResolver } from "@/utils/helpers";
 
 
 const HomeFoodSection = ({ order,position, data}) => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+ 
   return (
     <div className="w-full my-[100px]">
       
