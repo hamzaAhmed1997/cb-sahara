@@ -27,8 +27,6 @@ const SaharaMarket = ({ order, data }) => {
             {order == 1 ? (
               <div
                 className="flex md:items-end justify-center py-[30px] md:py-[70px] md:px-[10px]"
-                data-aos="fade-left"
-                data-aos-duration="3000"
               >
                 <img
                   src="https://saharamkt.com/wp-content/uploads/2020/01/Restaurant_ed3850622aa2ae55b80492a7fa935d02.jpg"

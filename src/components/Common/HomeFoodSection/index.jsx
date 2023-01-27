@@ -40,8 +40,7 @@ const HomeFoodSection = ({ order,position}) => {
             className={`py-[30px] px-[10px] w-full flex justify-center  ${
               order == 1 ? "order-1": "order-2" 
             }`}
-            data-aos="fade-left"
-            data-aos-duration="3000"
+            
           >
             <img
               src="https://saharamkt.com/wp-content/uploads/2020/01/Restaurant_ed3850622aa2ae55b80492a7fa935d02.jpg"
