@@ -1,6 +1,6 @@
 import React from "react";
 
-const SaharaMarket = ({ order, data }) => { 
+const SaharaMarket = ({ order, data }) => {
   return (
     <div className="w-full py-[50px] md:py-[70px] lg:py-[80px] bg-[#6A0000] my-[60px]">
       <div className=" max-w-[1140px] w-full mx-auto px-4">

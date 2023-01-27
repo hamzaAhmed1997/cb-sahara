@@ -10,8 +10,10 @@ import FlipImages from "./FlipImages";
 import FlipCards from "./FlipCards";
 import ContactForm from "../ContactPage/ContactForm";
 import ContactMap from "./ContactMap";
+import Meat from "../Common/Meat";
 
 const HomePage = ({data, contact}) => {
+
   const order = 1;
   const position="1"
   return (
@@ -22,14 +24,15 @@ const HomePage = ({data, contact}) => {
       <SaharaMarket data={data?.welcome}/>
       <FlipCards data={data?.ourfacilities}/>
       <ImageSlider data={data?.imageslider} />
-      <HomeFoodSection  order={order} position={position} />
-      <HomeSingleSlider />
-      <SaharaMarket order={order}/>
-      <HomeFoodSection />
-      <HomeSingleSlider />
-      <HomeFoodSection />
-      <HomeFoodSection order={order} />
-      <HomeSingleSlider />
+      <HomeFoodSection  order={order} position={position} data={data?.ourprovides?.afghani} />
+      <HomeSingleSlider data={data?.ourprovides?.image1}/>
+      <Meat order={order ==2} data={data?.ourprovides?.meatandchicken}/>
+      <HomeSingleSlider data={data?.ourprovides?.image2}/>
+      <HomeFoodSection order={order} data={data?.ourprovides?.mediterranean}/>
+      <HomeSingleSlider data={data?.ourprovides?.image3}/>
+      <HomeFoodSection order={order} data={data?.ourprovides?.catering} />
+      <HomeFoodSection order={order == 2} data={data?.ourprovides?.groceries} />
+
       <Testimonial data={data?.testimonials}/>
       <ContactForm data={contact}/>
       <ContactMap/>
