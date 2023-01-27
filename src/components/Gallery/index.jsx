@@ -7,10 +7,6 @@ import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 import { imageResolver } from '@/utils/helpers';
 
-
-
-
-
 const index = ({data}) => {
   const gallerydata = 
 [
