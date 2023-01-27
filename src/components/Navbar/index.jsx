@@ -32,8 +32,6 @@ const Navbar = ({ data }) => {
   const [isSubMenu, setIsSubmenu] = useState(false);
   const [isSubMenu1, setIsSubmenu1] = useState(false);
   const [isMenu, setIsMenu] = useState(false);
-  const [isSubMenu2, setIsSubmenu2] = useState(false);
-  const [isSubMenu3, setIsSubmenu3] = useState(false);
   return (
     <div className="fixed top-0 z-50 w-full mx-auto">
       <div className="transition ">
@@ -130,19 +128,21 @@ const Navbar = ({ data }) => {
                     </li>
                   </Link>
                 ))}
-            </ul>
+              </ul>
             </div>
             <div className="lg:hidden flex items-center lg:bg-white  h-[32px] w-[40px] justify-center ">
               <Hamburger
+                data={data?.navitems}
+                store={about}
                 isMenu={isMenu}
                 setIsMenu={setIsMenu}
                 isSubMenu={isSubMenu}
-                isSubMenu2={isSubMenu2}
-                isSubMenu3={isSubMenu3}
                 setIsSubmenu={setIsSubmenu}
-                setIsSubmenu1={setIsSubmenu}
-                setIsSubmenu2={setIsSubmenu2}
-                setIsSubmenu3={setIsSubmenu3}
+                isSubMenu1={isSubMenu1}
+                setIsSubmenu1={setIsSubmenu1}
+                orderdropdown={orderOnline}
+
+
               />
             </div>
           </div>

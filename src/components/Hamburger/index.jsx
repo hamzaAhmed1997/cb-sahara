@@ -1,26 +1,19 @@
 import React from "react";
 import styles from "./style.module.css";
 import Link from "next/link";
-const data = [
-  { title: "HOME", link: "#" },
-  { title: "STORE", link: "#" },
-  { title: "GALLERY", link: "#" },
-  { title: "CONTACT", link: "#" },
-  { title: "ORDER ONLINE", link: "#" },
-];
 
-const dropdown = [{ title: "Dropdown" }, { title: "Dropdown" }];
-const dropdownPage = [{ title: "DropdownPage" }, { title: "DropdownPage" }];
 const Hamburger = ({
-  isSubMenu1,
   isSubMenu2,
   isMenu,
-  setIsSubmenu1,
   setIsSubmenu2,
   setIsMenu,
-  // data,
-  // dropdown,
-  // dropdownPage,
+  data,
+  store,
+  isSubMenu,
+  setIsSubmenu,
+  isSubMenu1,
+  setIsSubmenu1,
+  orderdropdown
 }) => {
   return (
     <>
@@ -48,7 +41,7 @@ const Hamburger = ({
       {isMenu && (
         <span
           onClick={() => {
-            setIsMenu(!isMenu), setIsSubmenu1(false), setIsSubmenu2(false);
+            setIsMenu(!isMenu), setIsSubmenu1(false), setIsSubmenu(false);
           }}
           className="transition-all duration-500 ease-linear px-4"
         >
@@ -65,7 +58,7 @@ const Hamburger = ({
         </span>
       )}
       {isMenu && (
-        <div className="bg-white  z-50 min-h-[200px] absolute left-0 top-[130px] w-full shadow-lg">
+        <div className="bg-white  z-50 min-h-[200px] absolute left-0 top-[112px] w-full shadow-lg">
           {data?.map((item, index) => (
             <ul key={index} className="w-full">
               <li
@@ -76,8 +69,8 @@ const Hamburger = ({
                     {" "}
                     <div
                       onClick={() => {
-                        index === 2 && setIsSubmenu1(!isSubMenu1),
-                          index === 3 && setIsSubmenu2(!isSubMenu2);
+                        index === 1 && setIsSubmenu(!isSubMenu),
+                          index === 4 && setIsSubmenu1(!isSubMenu1);
                       }}
                       className={`inline-flex  cursor-pointer ${styles.cusMenu} flex-col`}
                     >
@@ -92,6 +85,9 @@ const Hamburger = ({
                           {index === 1 && (
                             <>
                               <svg
+                              onClick={()=>{
+                                index === 1 && setIsSubmenu(!isSubMenu)
+                              }}
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="12"
                                 height="12"
@@ -107,6 +103,9 @@ const Hamburger = ({
                             <>
                               <span>
                                 <svg
+                                onClick={()=>{
+                                  index === 1 && setIsSubmenu1(!isSubMenu1)
+                                }}
                                   xmlns="http://www.w3.org/2000/svg"
                                   width="12"
                                   height="12"
@@ -128,12 +127,12 @@ const Hamburger = ({
               <>
                 {index === 1 && (
                   <>
-                    {isSubMenu1 && (
+                    {isSubMenu && (
                       <div
                         className={` w-full transition-all duration-3000 ease  z-50 bg-white  `}
                       >
                         <ul className={` bg-white`}>
-                          {dropdownPage?.map((item, index) => (
+                          {store?.map((item, index) => (
                             <Link
                               key={index}
                               href={item.link || "/"}
@@ -157,12 +156,12 @@ const Hamburger = ({
                 )}
                 {index === 4 && (
                   <>
-                    {isSubMenu2 && (
+                    {isSubMenu1 && (
                       <div
                         className={` w-full transition-all duration-3000 ease  z-50 bg-white  `}
                       >
                         <ul className={` bg-white`}>
-                          {dropdownPage?.map((item, index) => (
+                          {orderdropdown?.map((item, index) => (
                             <Link
                               key={index}
                               href={item.link || "/"}
