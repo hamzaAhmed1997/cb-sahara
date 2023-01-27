@@ -164,10 +164,10 @@ const Hamburger = ({
                           {orderdropdown?.map((item, index) => (
                             <Link
                               key={index}
-                              href={item.link || "/"}
+                              href={`${item.link}`}
                               legacyBehavior
                             >
-                              <a href="" className="">
+                              <a href={`${item.link}`} className="">
                                 <li
                                   className={`px-[30px] py-[13px] text-black transition-all ease duration-500 ${styles.cusHover}`}
                                 >
