@@ -7,7 +7,7 @@ export const Instagram = ( props ) => {
       width="16"
       height="16"
       fill="#ffff"
-      class="bi bi-instagram"
+      className="bi bi-instagram"
       viewBox="0 0 16 16"
       {...props}
     >

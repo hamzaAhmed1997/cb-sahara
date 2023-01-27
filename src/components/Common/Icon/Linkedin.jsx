@@ -8,7 +8,7 @@ export default function Linkedin( props ) {
         width={18}
         height={18}
         fill="white"
-        class="bi bi-linkedin"
+        className="bi bi-linkedin"
         viewBox="0 0 16 16"
         {...props}
       >

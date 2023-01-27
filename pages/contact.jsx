@@ -6,7 +6,7 @@ import { adminPath } from '@/utils/constants'
 export default function contact({pageData, siteData}) {
   return (
     <div>
-      <Layout data={siteData}>
+      <Layout data={siteData}  seoData={pageData?.seo}>
         <ContactPage contact={siteData?.contact} data={pageData}/>
       </Layout>
     </div>

@@ -4,7 +4,7 @@ import { imageResolver } from "@/utils/helpers";
 
 const CardItem = ({ title,button,link, image }) => {
   return (
-    <div className=" relative  w-[305px] h-[300px] bg-red-600 mx-auto">
+    <div className=" relative  max-w-[305px] h-[300px] bg-red-600 mx-auto">
       <div className="text-center ">
         <img
           src={imageResolver(image).path}
