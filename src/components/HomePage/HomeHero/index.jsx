@@ -53,12 +53,12 @@ export default function HomeHero({data}) {
           return (
             <div key={index}>
               <div
-                className="text-center "
+                className="text-center"
                 style={{
-                  background: `url(${imageResolver(item?.dishimg)?.path}) no-repeat center center/cover`,
+                  background: `url(${imageResolver(item?.dishimg)?.path}) no-repeat center center/cover `,height:"640px"
                 }}
               >
-                <div className="bg-gradient-to-r from-[#353232b0] py-[300px]">
+                <div className="bg-gradient-to-r from-[#353232b0] py-[250px] md:py-[270px] lg:py-[300px]">
                   <div
                     data-aos="fade-up"
                     data-aos-duration="3000"

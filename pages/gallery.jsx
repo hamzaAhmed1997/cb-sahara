@@ -3,25 +3,25 @@ import Gallerypage from '@/src/components/Gallery'
 import Layout from '@/src/components/Layout'
 import { adminPath } from "@/utils/constants";
 
-export default function Gallery({galleryData, siteData}) {
+export default function Gallery({siteData, pageData}) {
   return (
     <>
-    <Layout data={siteData}>
-      <Gallerypage data={galleryData}/>
+    <Layout data={siteData}  seoData={pageData?.seo}>
+      <Gallerypage data={pageData}/>
       </Layout>
     </>
   )
 }
 export async function getStaticProps() {
-  let galleryData = null;
+  let pageData = null;
   let siteData = null;
   try {
-    galleryData = await (await fetch(`${adminPath}/gallery?populate=deep`)).json();
+    pageData = await (await fetch(`${adminPath}/gallery?populate=deep`)).json();
     siteData = await (await fetch(`${adminPath}/site?populate=deep`)).json();
   } catch (err) {}
   return {
     props: {
-      galleryData: galleryData?.data?.attributes || "null",
+      pageData: pageData?.data?.attributes || "null",
       siteData: siteData?.data?.attributes || "null",
     },
   };
