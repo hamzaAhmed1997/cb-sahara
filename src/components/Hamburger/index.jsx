@@ -21,7 +21,7 @@ const Hamburger = ({
       {!isMenu && (
         <span
           onClick={() => setIsMenu(!isMenu)}
-          className="transition-all duration-500 ease-linear px-4"
+          className="px-4 transition-all duration-500 ease-linear"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ const Hamburger = ({
           onClick={() => {
             setIsMenu(!isMenu), setIsSubmenu1(false), setIsSubmenu(false);
           }}
-          className="transition-all duration-500 ease-linear px-4"
+          className="px-4 transition-all duration-500 ease-linear"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ const Hamburger = ({
         </span>
       )}
       {isMenu && (
-        <div className="bg-white  z-50 min-h-[200px] absolute left-0 top-[112px] w-full shadow-lg">
+        <div className="bg-white  z-50 min-h-[200px] absolute left-0 top-[105px] sm:top-[109px] md:top-[112px] w-full shadow-lg">
           {data?.map((item, index) => (
             <ul key={index} className="w-full">
               <li
