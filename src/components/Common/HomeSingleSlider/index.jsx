@@ -1,10 +1,11 @@
+import { imageResolver } from '@/utils/helpers'
 import React from 'react'
 
-const HomeSingleSlider = () => {
+const HomeSingleSlider = ({data}) => {
   return (
     <div className="w-full my-[60px]"
     >
-     <div className="w-full hidden lg:flex py-[280px]" style={{backgroundImage:`url("https://saharamkt.com/wp-content/uploads/2019/12/Para-20_e44d0ead2a29f45c41399f7ad3fae1fe.jpg")`,
+     <div className="w-full hidden lg:flex py-[280px]" style={{backgroundImage:`url(${imageResolver(data?.image).path})`,
     backgroundRepeat:"no-repeat",
     backgroundSize:"cover"
 }}  >

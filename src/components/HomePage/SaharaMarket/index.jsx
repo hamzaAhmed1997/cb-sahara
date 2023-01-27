@@ -1,6 +1,6 @@
 import React from "react";
 
-const SaharaMarket = ({ order, data }) => { 
+const SaharaMarket = ({ order, data }) => {
   return (
     <div className="w-full py-[80px] bg-[#6A0000] my-[60px]">
       <div className=" max-w-[1140px] w-full mx-auto px-4">
@@ -15,7 +15,7 @@ const SaharaMarket = ({ order, data }) => {
               Welcome to
               </p>
               <h2 className="text-center border-b-[3px] border-[#FFB400] pb-2 text-[#FFB400] text-[30px] sm:text-[40px] font-bold leading-[1.2] mt-[8px] mb-[16px] ">
-              {data?.text}
+              {data?.text} 
               </h2>
             </div>
             <div
