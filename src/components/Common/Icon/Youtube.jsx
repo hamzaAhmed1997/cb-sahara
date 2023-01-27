@@ -7,7 +7,7 @@ export const Youtube = ( props ) => {
       width="20"
       height="20"
       fill="#ffff"
-      class="bi bi-youtube"
+      className="bi bi-youtube"
       viewBox="0 0 16 16"
       {...props}
     >
