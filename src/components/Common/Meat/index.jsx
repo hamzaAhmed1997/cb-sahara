@@ -17,7 +17,7 @@ const Meat = ({ order, data}) => {
             }`}
 
           >
-            <h2 className=" text-[36px] text-center border-b-[3px] text-[#FFB400] pb-2 border-[#FFB400]  font-bold leading-[1.2] mb-[16px] ">
+            <h2 className="text-[28px] sm:text-[30px] md:text-[32px] lg:text-[36px] text-center border-b-[3px] text-[#FFB400] pb-2 border-[#FFB400]  font-bold leading-[1.2] mb-[20px] ">
               {data?.title}
             </h2>
             <p className="text-white text-[17px] font-400 leading-[2em] md:p-[10px] ">

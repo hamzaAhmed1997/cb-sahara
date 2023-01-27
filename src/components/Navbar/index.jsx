@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import SubMenu from "./subMenu";
 import TopCard from "./TopCard";
 import Hamburger from "../Hamburger";
+import { imageResolver } from "@/utils/helpers";
 
 
 const Navbar = ({ data }) => {
@@ -39,7 +40,7 @@ const Navbar = ({ data }) => {
                 <a href={"/"}>
                   <img
                     className="w-full h-full"
-                    src="https://saharamkt.com/wp-content/uploads/2019/07/Logo-2020-01-28-Rect-left.png"
+                    src={imageResolver(data?.navicon?.logo)?.path}
                     alt="logo"
                     loading="lazy"
                   ></img>
