@@ -16,10 +16,10 @@ const HomePage = ({data, contact}) => {
   const position="1"
   return (
     <div>
-      <HomeHero />
+      <HomeHero data={data?.ourDishes}/>
       <ServicesCards data={data?.onlineOrder} />
-      <FlipImages/>
-      <SaharaMarket />
+      <FlipImages data={data?.flipImage}/>
+      <SaharaMarket data={data?.welcome}/>
       <FlipCards/>
       <ImageSlider />
       <HomeFoodSection order={order} position={position} />
