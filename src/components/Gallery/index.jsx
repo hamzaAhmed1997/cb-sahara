@@ -8,40 +8,7 @@ import "react-image-lightbox/style.css";
 import { imageResolver } from '@/utils/helpers';
 
 const index = ({data}) => {
-  const gallerydata = 
-[
-  {
-    image: (imageResolver(data?.galleryimgslider[0]?.image).path),
-  },
-  {
-    image: (imageResolver(data?.galleryimgslider[1]?.image).path),
-  },
-  {
-    image: (imageResolver(data?.galleryimgslider[2]?.image).path),
-  },
-  {
-    image: (imageResolver(data?.galleryimgslider[3]?.image).path),
-  },
-  {
-    image: (imageResolver(data?.galleryimgslider[4]?.image).path),
-  },
-  {
-    image: (imageResolver(data?.galleryimgslider[5]?.image).path),
-  },
-  {
-    image: (imageResolver(data?.galleryimgslider[6]?.image).path),
-  },
-  {
-    image: (imageResolver(data?.galleryimgslider[7]?.image).path),
-  },
-  {
-    image: (imageResolver(data?.galleryimgslider[8]?.image).path),
-  },
-  {
-    image: (imageResolver(data?.galleryimgslider[9]?.image).path),
-  },
-  
-];
+ 
 
 const images = [
   { title: "1", caption: "Image 1", url: (imageResolver(data?.galleryimg[0]?.image).path), },
@@ -304,10 +271,10 @@ const images1 = [
     <div className=" py-[60px] bg-[#FFC648]">
       <div className='max-w-[1090px] mx-auto cursor-grabbing'>
       <Slider {...settings} >
-        {gallerydata.map((item, index) => {
+        {data?.galleryimgslider?.map((item, index) => {
           return (
            <div key={index} className="max-w-[360px] px-2 ">
-            <img  src={item.image} className=" max-w-[100%] mx-auto" loading='lazy' alt='Image slider'></img>
+            <img  src={imageResolver(item?.image).path} className=" max-w-[100%] mx-auto" loading='lazy' alt='Image slider'></img>
            </div>
           );
         })}
