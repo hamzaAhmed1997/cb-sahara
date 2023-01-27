@@ -15,9 +15,7 @@ const ServicesCards = ({data}) => {
         {data?.orderDescription}
         </h2>
       </div>
-      <div className="grid gap-12 lg:grid-cols-3 md:grid-cols-2"
-      data-aos=""
-      data-aos-duration="">
+      <div className="grid gap-12 lg:grid-cols-3 md:grid-cols-2">
         {data?.orderCard?.map((item, index) => {
           return (
             <div key={index}>
