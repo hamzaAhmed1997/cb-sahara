@@ -6,8 +6,8 @@ const FlipImages = ({data}) => {
     <div className="w-full my-[40px]">
       <div className=" max-w-[1140px] w-full mx-auto px-4">
         <div className="grid w-full grid-cols-3 gap-4 mx-auto lg:grid-cols-6"
-         data-aos="fade-right"
-         data-aos-duration="3000">
+         data-aos=""
+         data-aos-duration="">
           {data?.map((item, index) => {
             return (
               <div key={index}>

@@ -16,8 +16,8 @@ const ServicesCards = ({data}) => {
         </h2>
       </div>
       <div className="grid gap-12 lg:grid-cols-3 md:grid-cols-2"
-      data-aos="fade-left"
-      data-aos-duration="3000">
+      data-aos=""
+      data-aos-duration="">
         {data?.orderCard?.map((item, index) => {
           return (
             <div key={index}>
