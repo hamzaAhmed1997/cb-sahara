@@ -9,8 +9,7 @@ import Linkedin from "../Common/Icon/Linkedin";
 import { Instagram } from "../Common/Icon/Instagram";
 import { imageResolver } from "@/utils/helpers";
 
-export default function Footer({data}) {
-   
+export default function Footer({ data }) {
   const router = useRouter();
   const currentRoute = router.pathname.slice(0);
   const [isSubMenu, setIsSubmenu] = useState(false);
@@ -20,7 +19,10 @@ export default function Footer({data}) {
       <div className="max-w-[1140px] mx-auto px-4 md:flex pt-[60px] justify-between text-center sm:text-start">
         <div className="md:w-[40%]">
           <div className="max-w-[300px] h-[80px] mb-[15px]">
-            <img className="w-full h-full" src={imageResolver(data?.logo).path}  />
+            <img
+              className="w-full h-full"
+              src={imageResolver(data?.logo).path}
+            />
           </div>
           <p className="text-[16px] leading-[24px] text-white font-normal">
             {data?.marketdetails}
@@ -111,7 +113,7 @@ export default function Footer({data}) {
                     className=""
                   >
                     <a
-                      href={item?.link} 
+                      href={item?.link}
                       className={` text-[16px] leading-[35px] text-[#ffffff]  hover:text-[#FFC648] transition font-semibold tracking-[1px] ${
                         currentRoute === item.link
                           ? "text-[#FFC648] border-b-[2px] border-[#FFC648]"
@@ -150,18 +152,23 @@ export default function Footer({data}) {
           {data?.links?.date}
           <span className="hover:text-[#FFC648] transition-all duration-300 font-[500]">
             <Link href={`${data?.links?.companylink}`} legacyBehavior>
-              <a href={`${data?.links?.companylink}`}> {data?.links?.companytext} </a>
+              <a href={`${data?.links?.companylink}`}>
+                {" "}
+                {data?.links?.companytext}{" "}
+              </a>
             </Link>{" "}
           </span>
           {data?.links?.publisherheading}
           <span className="hover:text-[#FFC648] transition-all duration-300 font-[500]">
-            <Link
-              href={`${data?.links?.publisherlink}`}
-              legacyBehavior
-              target={"_blank"}
-              rel="noopener"
-            >
-              <a href={`${data?.links?.publisherlink}`}> {data?.links?.publishertext}</a>
+            <Link href={`${data?.links?.publisherlink}`} legacyBehavior>
+              <a
+                href={`${data?.links?.publisherlink}`}
+                target={"_blank"}
+                rel="noopener"
+              >
+                {" "}
+                {data?.links?.publishertext}
+              </a>
             </Link>
           </span>
         </div>

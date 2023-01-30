@@ -70,8 +70,8 @@ export default function HomeHero({data}) {
                     <p className="mb-[30px] text-[20px] sm:text-[25px] md:text-[28px] lg:text-[30px] leading-[33px] md:leading-[42px]  font-[600] text-[#ffb400] ">
                       {item.dishDescription}
                     </p>
-                    <Link href={``} legacyBehavior>
-                      <a href={``}>
+                    <Link href={"#onlineOrder"} legacyBehavior>
+                      <a href={"#onlineOrder"}>
                         <button className="sm:text-[17px] md:text-[18px] leading-[18px] font-[400] text-[#ffb400] hover:text-white py-3 px-6 border-[2px] transition border-[#ffb400] rounded hover:bg-[#ffb400] ">
                           {item.dishButton.name}
                         </button>
