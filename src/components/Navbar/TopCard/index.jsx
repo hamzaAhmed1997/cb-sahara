@@ -53,7 +53,7 @@ const TopCard = () => {
             </Link>
         <Link href={""} legacyBehavior>
               <a href='' className="">
-                <Profile className="hover:stroke-[#6A0000] transition-all duration-300"/>
+                <Profile className="hover:stroke-[#6A0000]  transition-all duration-300"/>
               </a>
             </Link>
         </div>
