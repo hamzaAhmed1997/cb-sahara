@@ -16,27 +16,27 @@ const TopCard = () => {
      <div className='flex items-center justify-between max-w-[1140px] mx-auto px-4  '>
      <div className="w-[21%]">
         <div className="flex gap-x-[10px] space-x-2  py-3  w-full md:w-auto items-center">
-        <Link href={"#"} legacyBehavior>
+        <Link href={""} legacyBehavior>
               <a className="">
                 <Facebook className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
-        <Link href={"#"} legacyBehavior>
+        <Link href={""} legacyBehavior>
               <a className="">
                 <Twitter className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
-        <Link href={"#"} legacyBehavior>
+        <Link href={""} legacyBehavior>
               <a className="">
                 <Google width="18" height="18" className="hover:stroke-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
-        <Link href={"#"} legacyBehavior>
+        <Link href={""} legacyBehavior>
               <a className="">
                 <Instagram className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
-        <Link href={"#"} legacyBehavior>
+        <Link href={""} legacyBehavior>
               <a className="">
              <Youtube className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
@@ -45,14 +45,14 @@ const TopCard = () => {
       </div>
       <div className="w-[21%]">
         <div className="flex gap-x-[2px] space-x-2  py-3 justify-end w-ful md:w-auto md:items-center">
-        <Link href={"#"} legacyBehavior className='hover:fill-slate-600'>
+        <Link href={""} legacyBehavior className='hover:fill-slate-600'>
               <a className="">
-               <Cart />
+               <Cart className="hover:stroke-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
-        <Link href={"#"} legacyBehavior>
+        <Link href={""} legacyBehavior>
               <a className="">
-                <Profile/>
+                <Profile className="hover:stroke-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         </div>
