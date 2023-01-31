@@ -47,6 +47,7 @@ const index = ({data}) => {
                                 key={i}
                                 className={`w-${i % 3 === 2 ? 'full' : '1/2'} p-2 md:p-2`}
                               >
+                                
                                 <img
                                   alt="gallery"
                                   loading="lazy"
