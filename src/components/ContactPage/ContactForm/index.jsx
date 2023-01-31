@@ -226,42 +226,42 @@ const ContactForm = ({ data }) => {
                   <input
                     type="checkbox"
                     id="Catering"
-                    name="Inquiries"
+                    name="Catering"
                     value="Catering"
                   />
                   <label htmlFor="vehicle1">Catering</label>
                   <input
                     type="checkbox"
                     id="Restaurant"
-                    name="Inquiries"
+                    name="Restaurant"
                     value="Restaurant"
                   />
                   <label htmlFor="vehicle2">Restaurant</label>
                   <input
                     type="checkbox"
                     id="Meat & Chicken"
-                    name="Inquiries"
+                    name="Meat & Chicken"
                     value="Meat & Chicken"
                   />
                   <label htmlFor="vehicle3">Meat & Chicken</label>
                   <input
                     type="checkbox"
                     id="Grocery"
-                    name="Inquiries"
+                    name="Grocery"
                     value="Grocery"
                   />
                   <label htmlFor="vehicle3">Grocery</label>
                   <input
                     type="checkbox"
                     id="Bakery"
-                    name="Inquiries"
+                    name="Bakery"
                     value="Bakery"
                   />
                   <label htmlFor="vehicle3">Bakery</label>
                   <input
                     type="checkbox"
                     id="Fresh Produce"
-                    name="Inquiries"
+                    name="Fresh Produce"
                     value="Fresh Produce"
                   />
                   <label htmlFor="vehicle3">Fresh Produce</label>
