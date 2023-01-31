@@ -22,6 +22,8 @@ export default function Footer({ data }) {
             <img
               className="w-full h-full"
               src={imageResolver(data?.logo).path}
+                alt="logo"
+                loading="lazy"
             />
           </div>
           <p className="text-[16px] leading-[24px] text-white font-normal">

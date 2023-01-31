@@ -47,7 +47,7 @@ export default function HomeHero({data}) {
     prevArrow: <SampleNextArrow />,
   };
   return (
-    <div className="cursor-grab">
+    <div className="cursor-grab" id="homeHero">
       <Slider {...settings}>
         {data?.map((item, index) => {
           return (

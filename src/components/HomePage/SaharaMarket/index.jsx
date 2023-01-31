@@ -30,8 +30,9 @@ const SaharaMarket = ({ order, data }) => {
               >
                 <img
                   src="https://saharamkt.com/wp-content/uploads/2020/01/Restaurant_ed3850622aa2ae55b80492a7fa935d02.jpg"
-                  alt=""
+                  alt="sahara market "
                   className="shadow "
+                  loading="lazy"
                 />
               </div>
             ) : null}

@@ -122,6 +122,7 @@ const Testimonial = ({ data }) => {
                         <img
                           src={imageResolver(item?.img).path}
                           alt="testimonial logo"
+                          loading="lazy"
                           className="max-w-[50%] max-h-[50%] rounded-[999px]"
                         />
                         <div className="flex flex-col text-start">
