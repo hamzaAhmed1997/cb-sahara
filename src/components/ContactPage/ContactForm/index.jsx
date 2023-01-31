@@ -199,6 +199,7 @@ const ContactForm = ({ data }) => {
                     className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
                   />
                 </div>
+                
                 <div className="sm:w-[50%] flex flex-col md:ml-6 sm:mt-0 mt-4">
                   <label className="text-[#6a0000] leading-[16px] font-normal">
                     Company Name <span className="text-[#6a0000]">*</span>
