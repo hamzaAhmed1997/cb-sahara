@@ -9,11 +9,11 @@ export const Cart = (props) => {
       height="20"
       viewBox="0 0 24 24"
       strokeWidth="2"
-         stroke="#ffffff"
+      stroke="#ffffff"
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
-          {...props}
+    {...props}
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <circle cx="6" cy="19" r="2" />

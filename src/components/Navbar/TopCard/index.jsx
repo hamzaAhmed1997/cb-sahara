@@ -7,6 +7,7 @@ import { Instagram } from '../../Common/Icon/Instagram';
 import { Youtube } from '../../Common/Icon/Youtube';
 import { Profile } from '../../Common/Icon/Profile';
 import { Cart } from '../../Common/Icon/Cart';
+
 // import Instagram from '../../Common/Icon/Instagram'
 // import Youtube  from '../../Common/Icon/Youtube';
 
@@ -45,13 +46,13 @@ const TopCard = () => {
       </div>
       <div className="w-[21%]">
         <div className="flex gap-x-[2px] space-x-2  py-3 justify-end w-ful md:w-auto md:items-center">
-        <Link href={""} legacyBehavior className='hover:fill-slate-600'>
-              <a className="">
+        <Link href={""} legacyBehavior >
+              <a href='' className="">
                <Cart className="hover:stroke-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         <Link href={""} legacyBehavior>
-              <a className="">
+              <a href='' className="">
                 <Profile className="hover:stroke-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
