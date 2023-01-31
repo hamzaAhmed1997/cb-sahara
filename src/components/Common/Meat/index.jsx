@@ -28,8 +28,6 @@ const Meat = ({ order, data}) => {
             className={`py-[30px] px-[10px] w-full flex justify-center  ${
               order == 1 ? "order-1": "order-2" 
             }`}
-            data-aos="fade-left"
-            data-aos-duration="3000"
           >
             <img
               src={imageResolver(data?.image).path}
