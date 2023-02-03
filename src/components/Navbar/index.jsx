@@ -40,7 +40,7 @@ const Navbar = ({ data }) => {
                 <a href={"/"}>
                   <img
                     className="w-full h-full"
-                    src={imageResolver(data?.navicon?.logo)?.path}
+                    src={imageResolver(data?.logo)?.path}
                     alt="logo"
                     loading="lazy"
                   ></img>

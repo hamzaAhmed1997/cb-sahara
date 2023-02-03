@@ -28,6 +28,7 @@ const index = ({data}) => {
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
+              
             },
           },
         ],
@@ -35,15 +36,15 @@ const index = ({data}) => {
   return (
     <>
         <div className="mt-[20px] mb-[10px]  sm:mt-[40px] sm:mb-[30px] md:mt-[70px]">
-        <div className=" py-[60px] bg-[#FFC648]">
-          <div className="max-w-[1090px] mx-auto cursor-grabbing">
+        <div className=" py-[30px] sm:py-[40px] md:py-[50px] lg:py-[60px] bg-[#FFC648]">
+          <div className="max-w-[1090px] mx-auto cursor-grabbing ">
             <Slider {...settings}>
-              {data?.galleryimgslider?.map((item, index) => {
+              {data?.galleryimg?.map((item, index) => {
                 return (
-                  <div key={index} className="max-w-[360px] px-2 lg:pl-4 pl-[60px]">
+                  <div key={index} className="md:max-w-[360px] h-[252px] px-4 mx-auto">
                     <img
                       src={imageResolver(item?.image).path}
-                      className=" max-w-[100%] mx-auto "
+                      className=" w-[100%] h-full mx-auto object-cover "
                       loading="lazy"
                       alt="Image slider"
                     ></img>

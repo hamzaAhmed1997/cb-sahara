@@ -55,7 +55,7 @@ export default function HomeHero({data}) {
               <div
                 className="text-center "
                 style={{
-                  background: `url(${imageResolver(item?.dishimg)?.path}) no-repeat center center/cover`,height:"640px"
+                  background: `url(${imageResolver(item?.img)?.path}) no-repeat center center/cover`,height:"640px"
                 }}
               >
                 <div className="bg-gradient bg-[#241818b0] bg-opacity-50 py-[240px] md:py-[270px] lg:py-[300px]">
@@ -65,15 +65,15 @@ export default function HomeHero({data}) {
                     className="max-w-[950px] mx-auto px-4 "
                   >
                     <h2 className="text-[18px] md:text-[20px] text-[#ffffff] font-normal uppercase underline mb-[20px] md:mb-[25px] lg:mb-[30px] ">
-                      {item.dishTitle}
+                      {item.title}
                     </h2>
                     <p className="mb-[30px] text-[20px] sm:text-[25px] md:text-[28px] lg:text-[30px] leading-[33px] md:leading-[42px]  font-[600] text-[#ffb400] ">
-                      {item.dishDescription}
+                      {item.description}
                     </p>
                     <Link href={"#onlineOrder"} legacyBehavior>
                       <a href={"#onlineOrder"}>
                         <button className="sm:text-[17px] md:text-[18px] leading-[18px] font-[400] text-[#ffb400] hover:text-white py-3 px-6 border-[2px] transition border-[#ffb400] rounded hover:bg-[#ffb400] ">
-                          {item.dishButton.name}
+                          {item?.cta?.name}
                         </button>
                       </a>
                     </Link>

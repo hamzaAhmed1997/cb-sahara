@@ -61,7 +61,7 @@ const ImageSlider = ( {data}) => {
         {data?.map((item, index) => {
           return (
            <div key={index} className="px-3 ">
-            <img  src={imageResolver(item?.image).path} className="" loading='lazy' alt='Image slider'></img>
+            <img  src={imageResolver(item?.img).path} className="" loading='lazy' alt='Image slider'></img>
            </div>
           );
         })}

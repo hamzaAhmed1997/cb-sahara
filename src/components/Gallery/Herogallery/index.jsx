@@ -5,7 +5,7 @@ const index = ({data}) => {
   return (
     <>
       <div className='pt-[50px] max-w-[1600px] mx-auto '>
-        <img className='w-full' src={imageResolver(data).path} alt="gallery hero" loading='lazy' />
+        <img className='w-full' src={imageResolver(data?.img)?.path} alt="gallery hero" loading='lazy' />
       </div>
     </>
   )

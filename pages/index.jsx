@@ -8,7 +8,7 @@ export default function Home({pageData ,siteData}) {
   return (
     <>
       <Layout data={siteData} seoData={pageData?.seo}>
-        <HomePage contact={siteData?.contact} data={pageData}/>
+        <HomePage form={siteData?.form} data={pageData}/>
       </Layout>
     </>
   );

@@ -9,12 +9,12 @@ const FlipImages = ({data}) => {
           {data?.map((item, index) => {
             return (
               <div key={index}>
-                <div class="flip-card w-[139px] h-[139px] mx-auto">
-                  <div class="flip-card-inner relative w-full h-full ">
-                    <div class="flip-card-front absolute">
+                <div className="flip-card w-[139px] h-[139px] mx-auto">
+                  <div className="relative w-full h-full flip-card-inner ">
+                    <div className="absolute flip-card-front">
                       <img src={imageResolver(item.beforeflip)?.path} alt="Avatar" loading="lazy"/>
                     </div>
-                    <div class="flip-card-back absolute">
+                    <div className="absolute flip-card-back">
                     <img src={imageResolver(item.afterflip)?.path} alt="Avatar" loading="lazy" />
                     </div>
                   </div>

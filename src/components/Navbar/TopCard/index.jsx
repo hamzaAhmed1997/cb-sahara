@@ -6,7 +6,8 @@ import Google from '../../Common/Icon/Google';
 import { Instagram } from '../../Common/Icon/Instagram';
 import { Youtube } from '../../Common/Icon/Youtube';
 import { Profile } from '../../Common/Icon/Profile';
-import { Cart } from '../../Common/Icon/Cart';
+import Cart from '../../Common/Icon/Cart';
+
 
 // import Instagram from '../../Common/Icon/Instagram'
 // import Youtube  from '../../Common/Icon/Youtube';
@@ -18,27 +19,27 @@ const TopCard = () => {
      <div className="w-[21%]">
         <div className="flex gap-x-[10px] space-x-2  py-3  w-full md:w-auto items-center">
         <Link href={""} legacyBehavior>
-              <a href='' className="">
+              <a className="">
                 <Facebook className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         <Link href={""} legacyBehavior>
-              <a href='' className="">
+              <a className="">
                 <Twitter className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         <Link href={""} legacyBehavior>
-              <a href='' className="">
+              <a className="">
                 <Google width="18" height="18" className="hover:stroke-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         <Link href={""} legacyBehavior>
-              <a href='' className="">
+              <a className="">
                 <Instagram className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         <Link href={""} legacyBehavior>
-              <a href='' className="">
+              <a className="">
              <Youtube className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>

@@ -1,5 +1,6 @@
 import Layout from "@/src/components/Layout";
 import { adminPath } from "@/utils/constants";
+import { jwtToken } from "@/utils/constants";
 
 export default function Home({pageData ,siteData}) {
   return (
@@ -20,9 +21,24 @@ export default function Home({pageData ,siteData}) {
 export async function getStaticProps() {
   let pageData = null;
   let siteData = null;
+  let bearer = "Bearer " + jwtToken;
   try {
-    pageData = await (await fetch(`${adminPath}/meat?populate=deep`)).json();
-    siteData = await (await fetch(`${adminPath}/site?populate=deep`)).json();
+    pageData = await (await fetch(`${adminPath}/meat?populate=deep`,{
+      method: "GET",
+      withCredentials: true,
+      credentials: "include",
+      headers: {
+        Authorization: bearer,
+      },
+    })).json();
+    siteData = await (await fetch(`${adminPath}/site?populate=deep`,{
+      method: "GET",
+      withCredentials: true,
+      credentials: "include",
+      headers: {
+        Authorization: bearer,
+      },
+    })).json();
   } catch (err) {}
   return {
     props: {

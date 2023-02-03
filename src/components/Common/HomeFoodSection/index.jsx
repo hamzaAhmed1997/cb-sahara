@@ -31,7 +31,7 @@ const HomeFoodSection = ({ order,position, data}) => {
             
           >
             <img
-              src={imageResolver(data?.image).path}
+              src={imageResolver(data?.img).path}
               alt="food image"
               className="shadow"
               loading="lazy"

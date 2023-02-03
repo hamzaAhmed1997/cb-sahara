@@ -91,10 +91,10 @@ export default function Footer({ data }) {
               </a>
             </Link>
           </div>
-          <Link href={"/#onlineOrder"} legacyBehavior>
+          <Link href={`${data?.cta?.link}`} legacyBehavior>
             <div className="hover:cursor-pointer border-[2px] border-[#FFC648] text-[#FFC648] hover:text-[#6A0000] font-[700] hover:bg-[#FFC648] transition-all duration-300 mt-5 px-4 py-1 inline-flex  rounded-[3px]">
               <button>
-                <a href="/#onlineOrder">Order Online</a>
+                <a href={`${data?.cta?.link}`}>{data?.cta?.name}</a>
               </button>
             </div>
           </Link>

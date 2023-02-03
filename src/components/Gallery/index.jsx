@@ -8,7 +8,7 @@ const index = ({ data }) => {
  
   return (
     <div className="mt-12">
-      <Herogallery data={data?.herogallery} />
+      <Herogallery data={data?.hero} />
       <TopGallery data={data}/>
       <GallerySlider data={data}/>  
       <BottomGallery data={data}/>

@@ -5,7 +5,7 @@ import { imageResolver } from "@/utils/helpers";
 
 
 const index = ({data}) => {
-    const images = data?.multipleimage.map((img, index) => ({
+    const images = data?.multipleimage?.map((img, index) => ({
     title: `${index + 1}`,
     caption: `Image ${index + 1}`,
     url: imageResolver(img.image).path
@@ -34,19 +34,20 @@ const index = ({data}) => {
         <div className="container px-5 py-2 mx-auto lg:pt-24 lg:px-32">
           <button className="" onClick={() => setIsOpen(true)}>
             <div className="flex flex-wrap -m-1 md:-m-2">
-              {data?.multipleimage.map(
+              {data?.multipleimage?.map(
                 (image, index) => {
                   if (index % 3 === 0) {
                     return (
-                      <div className="flex flex-wrap w-1/2">
+                      <div className="flex flex-wrap w-1/2" key={index}>
                         {data?.multipleimage
                           .slice(index, index + 3)
                           .map((img, i) =>
                             img?.image?.data !== null && (
                               <div
                                 key={i}
-                                className={`w-${i % 3 === 2 ? 'full' : '1/2'} p-2 md:p-2`}
+                                className={`w-${i % 3 === 2 ? 'full' : '1/2'} p-[2px] sm:p-1 md:p-2`}
                               >
+                                
                                 <img
                                   alt="gallery"
                                   loading="lazy"

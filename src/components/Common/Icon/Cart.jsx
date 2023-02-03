@@ -1,10 +1,11 @@
 import React from "react";
 
-export const Cart = (props) => {
+export default function Cart(props) {
   return (
-    <svg
+    <div>
+     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-shopping-cart"
+      className="icon icon-tabler icon-tabler-shopping-cart"
       width="20"
       height="20"
       viewBox="0 0 24 24"
@@ -13,7 +14,7 @@ export const Cart = (props) => {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
-    {...props}
+      {...props}
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <circle cx="6" cy="19" r="2" />
@@ -21,5 +22,6 @@ export const Cart = (props) => {
       <path d="M17 17h-11v-14h-2" />
       <path d="M6 5l14 1l-1 7h-13" />
     </svg>
+    </div>
   );
-};
+}

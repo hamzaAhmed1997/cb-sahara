@@ -12,8 +12,7 @@ import ContactForm from "../ContactPage/ContactForm";
 import ContactMap from "./ContactMap";
 import Meat from "../Common/Meat";
 
-const HomePage = ({data, contact}) => {
-
+const HomePage = ({data, form}) => {
   const order = 1;
   const position="1"
   return (
@@ -22,19 +21,19 @@ const HomePage = ({data, contact}) => {
       <ServicesCards data={data?.onlineOrder} />
       <FlipImages data={data?.flipImage}/>
       <SaharaMarket data={data?.welcome}/>
-      <FlipCards data={data?.ourfacilities}/>
+      <FlipCards data={data?.flipcard}/>
       <ImageSlider data={data?.imageslider} />
-      <HomeFoodSection  order={order} position={position} data={data?.ourprovides?.afghani} />
-      <HomeSingleSlider data={data?.ourprovides?.image1}/>
-      <Meat order={order ==2} data={data?.ourprovides?.meatandchicken}/>
-      <HomeSingleSlider data={data?.ourprovides?.image2}/>
-      <HomeFoodSection order={order} data={data?.ourprovides?.mediterranean}/>
-      <HomeSingleSlider data={data?.ourprovides?.image3}/>
-      <HomeFoodSection order={order} data={data?.ourprovides?.catering} />
-      <HomeFoodSection order={order == 2} data={data?.ourprovides?.groceries} />
+      <HomeFoodSection  order={order} position={position} data={data?.afghani} />
+      <HomeSingleSlider data={data?.image1}/>
+      <Meat order={order ==2} data={data?.meatandchicken}/>
+      <HomeSingleSlider data={data?.image2}/>
+      <HomeFoodSection order={order} data={data?.mediterranean}/>
+      <HomeSingleSlider data={data?.image3}/>
+      <HomeFoodSection order={order} data={data?.catering} />
+      <HomeFoodSection order={order == 2} data={data?.groceries} />
 
       <Testimonial data={data?.testimonials}/>
-      <ContactForm data={contact}/>
+      <ContactForm data={form}/>
       <ContactMap/>
     </div>
   );
