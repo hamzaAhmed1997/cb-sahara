@@ -32,7 +32,6 @@ const index = ({data}) => {
 
 <section className="overflow-hidden text-gray-700">
         <div className="container px-5 py-2 mx-auto lg:pt-24 lg:px-32">
-          <button className="" onClick={() => setIsOpen(true)}>
             <div className="flex flex-wrap -m-1 md:-m-2">
               {data?.multipleimage?.map(
                 (image, index) => {
@@ -51,8 +50,12 @@ const index = ({data}) => {
                                 <img
                                   alt="gallery"
                                   loading="lazy"
-                                  className="block object-cover object-center w-full h-full rounded-lg"
+                                  className="block cursor-pointer object-cover object-center w-full h-full rounded-lg"
                                   src={imageResolver(img.image).path}
+                                  onClick={() => {
+                                    setImgIndex(index + i);
+                                    setIsOpen(true);
+                                  }}
                                 />
                               </div>
                             )
@@ -64,7 +67,6 @@ const index = ({data}) => {
                 }
               )}
             </div>
-          </button>
         </div>
       </section>
     </>
