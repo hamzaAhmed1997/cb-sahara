@@ -22,7 +22,7 @@ export default function Footer({ data }) {
             <img
               className="w-full h-full"
               src={imageResolver(data?.logo).path}
-                alt="logo"
+                alt="footer logo"
                 loading="lazy"
             />
           </div>

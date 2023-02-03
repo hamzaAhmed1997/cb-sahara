@@ -12,10 +12,10 @@ const FlipImages = ({data}) => {
                 <div className="flip-card w-[139px] h-[139px] mx-auto">
                   <div className="relative w-full h-full flip-card-inner ">
                     <div className="absolute flip-card-front">
-                      <img src={imageResolver(item.beforeflip)?.path} alt="Avatar" loading="lazy"/>
+                      <img src={imageResolver(item.beforeflip)?.path} alt="services images" loading="lazy"/>
                     </div>
                     <div className="absolute flip-card-back">
-                    <img src={imageResolver(item.afterflip)?.path} alt="Avatar" loading="lazy" />
+                    <img src={imageResolver(item.afterflip)?.path} alt="services images" loading="lazy" />
                     </div>
                   </div>
                 </div>

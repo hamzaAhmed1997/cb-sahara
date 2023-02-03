@@ -16,7 +16,7 @@ const FlipCards = ({ data }) => {
                     <div className="flip-cards-front mb-[20px]">
                       <img
                         src={imageResolver(item?.img).path}
-                        alt="flip card"
+                        alt="sevices card images"
                         loading="lazy"
                         className="w-[139px] h-[139px]"
                       />

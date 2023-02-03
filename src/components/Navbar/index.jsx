@@ -41,7 +41,7 @@ const Navbar = ({ data }) => {
                   <img
                     className="w-full h-full"
                     src={imageResolver(data?.logo)?.path}
-                    alt="logo"
+                    alt="navbar logo"
                     loading="lazy"
                   ></img>
                 </a>

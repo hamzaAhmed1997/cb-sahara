@@ -46,7 +46,7 @@ const index = ({data}) => {
                       src={imageResolver(item?.image).path}
                       className=" w-[100%] h-full mx-auto object-cover "
                       loading="lazy"
-                      alt="Image slider"
+                      alt="gallery slider images"
                     ></img>
                   </div>
                 );

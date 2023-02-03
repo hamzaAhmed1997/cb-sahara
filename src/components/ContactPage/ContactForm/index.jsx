@@ -79,7 +79,7 @@ const ContactForm = ({ data }) => {
               <img
                 className="w-full h-full"
                 src={imageResolver(data?.logoimg).path}
-                alt="form image"
+                alt="contact form logo"
                 loading="lazy"
               />
             </div>

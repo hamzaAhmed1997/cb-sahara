@@ -47,7 +47,7 @@ const index = ({data}) => {
                                 className={`w-${i % 3 === 2 ? 'full' : '1/2'} p-[2px] sm:p-1 md:p-2`}
                               >
                                 <img
-                                  alt="gallery"
+                                  alt="gallery images"
                                   loading="lazy"
                                   className="block cursor-pointer object-cover object-center w-full h-full rounded-lg"
                                   src={imageResolver(img.image).path}

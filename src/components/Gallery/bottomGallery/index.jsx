@@ -48,7 +48,7 @@ const index = ({data}) => {
                               >
                                 
                                 <img
-                                  alt="gallery"
+                                  alt="gallery images"
                                   loading="lazy"
                                   className="block cursor-pointer object-cover object-center w-full h-full rounded-lg"
                                   src={imageResolver(img.image).path}

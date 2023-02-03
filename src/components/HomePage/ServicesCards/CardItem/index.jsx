@@ -9,7 +9,7 @@ const CardItem = ({ title,button,link, image }) => {
         <img
           src={imageResolver(image).path}
           loading="lazy"
-          alt="services cards"
+          alt="services cards images"
         />
         <div className="overlay h-[331px] absolute top-0 left-0 right-0 bottom-0 bg-[#6A0000] opacity-0  hover:opacity-90">
           <div className="text absolute top-[50%] left-[50%] ">
