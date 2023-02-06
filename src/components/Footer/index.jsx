@@ -22,8 +22,8 @@ export default function Footer({ data }) {
             <img
               className="w-full h-full"
               src={imageResolver(data?.logo).path}
-                alt="footer logo"
-                loading="lazy"
+              alt="footer logo"
+              loading="lazy"
             />
           </div>
           <p className="text-[16px] leading-[24px] text-white font-normal">
@@ -31,64 +31,58 @@ export default function Footer({ data }) {
           </p>
           <div className="flex gap-x-[15px] items-center justify-center sm:justify-start mt-[20px]">
             <Link href={""} legacyBehavior>
-              <a href="">
-                {" "}
-                <span>
+              <span>
+                <a href="">
                   <Facebook
                     className="hover:fill-[#FFB400] transition-all duration-300"
                     width={22}
                     height={22}
-                  />{" "}
-                </span>
-              </a>
+                  />
+                </a>
+              </span>
             </Link>
             <Link href={""} legacyBehavior>
-              <a href="">
-                {" "}
-                <span>
+              <span>
+                <a href="">
                   <Twitter className="hover:fill-[#FFB400] transition-all duration-300" />{" "}
-                </span>
-              </a>
+                </a>
+              </span>
             </Link>
             <Link href={""} legacyBehavior>
-              <a href="">
-                {" "}
-                <span>
+              <span>
+                <a href="">
                   <Google
                     className="hover:stroke-[#FFB400] transition-all duration-300"
                     width={18}
                     height={18}
-                  />{" "}
-                </span>
-              </a>
+                  />
+                </a>
+              </span>
             </Link>
             <Link href={""} legacyBehavior>
-              <a href="">
-                {" "}
-                <span>
+              <span>
+                <a href="">
                   <Instagram className="hover:fill-[#FFB400] transition-all duration-300" />{" "}
-                </span>
-              </a>
+                </a>
+              </span>
             </Link>
             <Link href={""} legacyBehavior>
-              <a href="">
-                {" "}
-                <span>
+              <span>
+                <a href="">
                   <Youtube className="hover:fill-[#FFB400] transition-all duration-300" />{" "}
-                </span>
-              </a>
+                </a>
+              </span>
             </Link>
             <Link href={""} legacyBehavior>
-              <a href="">
-                {" "}
-                <span>
+              <span>
+                <a href="">
                   <Linkedin
                     className="hover:fill-[#FFB400] transition-all duration-300"
                     width={18}
                     height={16}
-                  />{" "}
-                </span>
-              </a>
+                  />
+                </a>
+              </span>
             </Link>
           </div>
           <Link href={`${data?.cta?.link}`} legacyBehavior>
