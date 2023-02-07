@@ -19,27 +19,27 @@ const TopCard = () => {
      <div className="w-[21%]">
         <div className="flex gap-x-[10px] space-x-2  py-3  w-full md:w-auto items-center">
         <Link href={""} legacyBehavior>
-              <a className="">
+              <a href="">
                 <Facebook className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         <Link href={""} legacyBehavior>
-              <a className="">
+              <a href="">
                 <Twitter className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         <Link href={""} legacyBehavior>
-              <a className="">
+              <a href="">
                 <Google width="18" height="18" className="hover:stroke-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         <Link href={""} legacyBehavior>
-              <a className="">
+              <a href="">
                 <Instagram className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         <Link href={""} legacyBehavior>
-              <a className="">
+              <a href="">
              <Youtube className="hover:fill-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
@@ -48,12 +48,12 @@ const TopCard = () => {
       <div className="w-[21%]">
         <div className="flex gap-x-[2px] space-x-2  py-3 justify-end w-ful md:w-auto md:items-center">
         <Link href={""} legacyBehavior >
-              <a href='' className="">
+              <a href='' >
                <Cart className="hover:stroke-[#6A0000] transition-all duration-300"/>
               </a>
             </Link>
         <Link href={""} legacyBehavior>
-              <a href='' className="">
+              <a href='' >
                 <Profile className="hover:stroke-[#6A0000]  transition-all duration-300"/>
               </a>
             </Link>
