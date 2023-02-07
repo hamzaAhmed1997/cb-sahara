@@ -8,10 +8,6 @@ import { Youtube } from '../../Common/Icon/Youtube';
 import { Profile } from '../../Common/Icon/Profile';
 import Cart from '../../Common/Icon/Cart';
 
-
-// import Instagram from '../../Common/Icon/Instagram'
-// import Youtube  from '../../Common/Icon/Youtube';
-
 const TopCard = () => {
   return (
     <div className="bg-[#FFC648]  ">

@@ -222,7 +222,7 @@ const ContactForm = ({ data }) => {
                 </div>
               </div>
               <div className="mt-4 mb-2">
-                <h3 className="text-[#6a0000]">Inquiries</h3>
+              <label className="text-[#6a0000]">Inquiries</label>
                 <div className="flex items-center gap-3 flex-wrap text-[#6a0000]">
                   <input
                     type="checkbox"
@@ -230,42 +230,42 @@ const ContactForm = ({ data }) => {
                     name="Catering"
                     value="Catering"
                   />
-                  <label htmlFor="vehicle1">Catering</label>
+                  <label htmlFor="Inquiries1">Catering</label>
                   <input
                     type="checkbox"
                     id="Restaurant"
                     name="Restaurant"
                     value="Restaurant"
                   />
-                  <label htmlFor="vehicle2">Restaurant</label>
+                  <label htmlFor="Inquiries2">Restaurant</label>
                   <input
                     type="checkbox"
                     id="Meat & Chicken"
                     name="Meat & Chicken"
                     value="Meat & Chicken"
                   />
-                  <label htmlFor="vehicle3">Meat & Chicken</label>
+                  <label htmlFor="Inquiries3">Meat & Chicken</label>
                   <input
                     type="checkbox"
                     id="Grocery"
                     name="Grocery"
                     value="Grocery"
                   />
-                  <label htmlFor="vehicle3">Grocery</label>
+                  <label htmlFor="Inquiries3">Grocery</label>
                   <input
                     type="checkbox"
                     id="Bakery"
                     name="Bakery"
                     value="Bakery"
                   />
-                  <label htmlFor="vehicle3">Bakery</label>
+                  <label htmlFor="Inquiries3">Bakery</label>
                   <input
                     type="checkbox"
                     id="Fresh Produce"
                     name="Fresh Produce"
                     value="Fresh Produce"
                   />
-                  <label htmlFor="vehicle3">Fresh Produce</label>
+                  <label htmlFor="Inquiries">Fresh Produce</label>
                 </div>
               </div>
               <div>
