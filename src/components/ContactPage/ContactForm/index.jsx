@@ -251,21 +251,21 @@ const ContactForm = ({ data }) => {
                     name="Grocery"
                     value="Grocery"
                   />
-                  <label htmlFor="Inquiries3">Grocery</label>
+                  <label htmlFor="Inquiries4">Grocery</label>
                   <input
                     type="checkbox"
                     id="Bakery"
                     name="Bakery"
                     value="Bakery"
                   />
-                  <label htmlFor="Inquiries3">Bakery</label>
+                  <label htmlFor="Inquiries5">Bakery</label>
                   <input
                     type="checkbox"
                     id="Fresh Produce"
                     name="Fresh Produce"
                     value="Fresh Produce"
                   />
-                  <label htmlFor="Inquiries">Fresh Produce</label>
+                  <label htmlFor="Inquiries6">Fresh Produce</label>
                 </div>
               </div>
               <div>
