@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Facebook from "../Common/Icon/Facebook";
@@ -10,6 +10,15 @@ import { Instagram } from "../Common/Icon/Instagram";
 import { imageResolver } from "@/utils/helpers";
 
 export default function Footer({ data }) {
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setYear(new Date().getFullYear());
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
   const router = useRouter();
   const currentRoute = router.pathname.slice(0);
   const [isSubMenu, setIsSubmenu] = useState(false);
@@ -145,7 +154,7 @@ export default function Footer({ data }) {
       <div className="max-w-[1140px] px-4 mx-auto h-[1px] bg-white mt-[30px] " />
       <div className="">
         <div className="text-center text-[14px] font-[400] text-white py-[20px] px-4">
-          {data?.links?.date}
+          {year}
           <span className="hover:text-[#FFC648] transition-all duration-300 font-[500]">
             <Link href={`${data?.links?.companylink}`} legacyBehavior>
               <a href={`${data?.links?.companylink}`}>
