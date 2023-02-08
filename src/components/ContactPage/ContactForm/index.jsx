@@ -250,6 +250,7 @@ const ContactForm = ({ data }) => {
                     id="Grocery"
                     name="Grocery"
                     value="Grocery"
+                    
                   />
                   <label htmlFor="Inquiries4">Grocery</label>
                   <input
